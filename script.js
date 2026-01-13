@@ -174,7 +174,7 @@ const translations = {
         'contact.location': 'Fortaleza - CE',
         
         // Botões
-        'button.cv': 'CV',
+        'button.cv': 'Currículo',
         'button.view': 'Ver Certificado',
         
         // Seções

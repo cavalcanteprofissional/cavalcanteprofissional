@@ -366,6 +366,12 @@ header {
 }
 
 .cv-download {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary);
+    color: white;
+    font-weight: 600;
     width: auto;
     padding: 0 20px;
     border-radius: 25px;
