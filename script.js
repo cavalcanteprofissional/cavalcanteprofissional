@@ -26,6 +26,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Configurar links de certificados
     setupCertificateLinks();
+    
+    setupCertificateLinksAlternative();
 });
 
 // ===== GERENCIAMENTO DE TEMA =====
@@ -48,7 +50,6 @@ function initializeTheme() {
 
 function setupThemeToggle() {
     const themeToggle = document.getElementById('themeToggle');
-    if (!themeToggle) return;
 
     themeToggle.addEventListener('click', function () {
         toggleTheme();
@@ -71,7 +72,6 @@ function toggleTheme() {
 
 function updateThemeIcon() {
     const themeIcon = document.querySelector('#themeToggle i');
-    if (!themeIcon) return;
 
     if (document.body.classList.contains('dark-mode')) {
         themeIcon.classList.remove('fa-moon');
@@ -134,8 +134,6 @@ function setupLanguageSelector() {
 
 function updateLanguageButton(lang) {
     const languageBtn = document.getElementById('languageBtn');
-    if (!languageBtn) return;
-
     const flagSpan = languageBtn.querySelector('.flag-icon');
     const codeSpan = languageBtn.querySelector('.lang-code');
 
@@ -153,7 +151,7 @@ function updateLanguageButton(lang) {
 // ===== GERENCIAMENTO DE CV =====
 function setupCvLink(lang) {
     const cvLinks = document.querySelectorAll(".cv-download-link");
-
+    
     cvLinks.forEach(link => {
         if (lang === "en") {
             link.href = "assets/certificados/cv_en_lucas_cavalcante.pdf";
@@ -164,27 +162,16 @@ function setupCvLink(lang) {
             link.setAttribute("aria-label", "Download Currículo");
             link.download = "Lucas_Cavalcante_Curriculo.pdf";
         }
+        // CORREÇÃO: Adicionar target blank para abrir em nova aba
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
     });
 }
 
 // ===== GERENCIAMENTO DE CERTIFICADOS =====
 function setupCertificateLinks() {
-    console.log("🔄 INICIANDO setupCertificateLinks()");
+    console.log("Configurando links dos certificados...");
     
-    // 1. Primeiro, vamos ver quantos links temos
-    const allCertLinks = document.querySelectorAll('.cert-link');
-    console.log(`📌 Total de links .cert-link encontrados: ${allCertLinks.length}`);
-    
-    allCertLinks.forEach((link, index) => {
-        console.log(`🔗 Link ${index + 1}:`, {
-            id: link.id,
-            href: link.href,
-            text: link.textContent.trim(),
-            parent: link.closest('.cert-card')?.querySelector('h3')?.textContent || 'Sem título'
-        });
-    });
-    
-    // 2. Agora vamos configurar
     const certificateFiles = {
         'cert1Link': 'montagem_manutencao.pdf',
         'cert2Link': 'design_grafico.pdf',
@@ -197,129 +184,95 @@ function setupCertificateLinks() {
         'cert9Link': 'banco_dados.pdf'
     };
     
-    console.log("📁 Mapeamento de arquivos:", certificateFiles);
-    
-    let successCount = 0;
-    let errorCount = 0;
-    
-    // 3. Configurar cada link
-    Object.entries(certificateFiles).forEach(([certId, fileName]) => {
-        console.log(`\n🔍 Procurando elemento: #${certId}`);
-        
-        const linkElement = document.getElementById(certId);
-        
-        if (!linkElement) {
-            console.error(`❌ Elemento NÃO encontrado: #${certId}`);
-            errorCount++;
-            return;
-        }
-        
-        console.log(`✅ Elemento encontrado:`, linkElement);
-        
-        // Configurar o link
-        const filePath = `assets/certificados/${fileName}`;
-        linkElement.href = filePath;
-        linkElement.download = fileName;
-        
-        // Verificar se configurou corretamente
-        console.log(`   Configurado: ${linkElement.href}`);
-        console.log(`   Download: ${linkElement.download}`);
-        
-        successCount++;
-    });
-    
-    console.log(`\n📊 RESULTADO: ${successCount} configurados, ${errorCount} erros`);
-    console.log("✅ setupCertificateLinks() FINALIZADO");
-}
-
-// ===== TESTE MANUAL =====
-// Adicione esta função para testar manualmente
-function testCertificateLinks() {
-    console.log("🧪 TESTE MANUAL DE CERTIFICADOS");
-    
-    // Testar se os arquivos existem
-    const files = [
-        'assets/certificados/ads_unifor.pdf',
-        'assets/certificados/montagem_manutencao.pdf'
-    ];
-    
-    files.forEach(file => {
-        console.log(`🔎 Verificando: ${file}`);
-        // Tentar acessar o arquivo
-        fetch(file, { method: 'HEAD' })
-            .then(response => {
-                console.log(response.ok ? `✅ Existe: ${file}` : `❌ Não existe: ${file}`);
-            })
-            .catch(error => {
-                console.log(`⚠️ Erro ao verificar ${file}:`, error.message);
-            });
-    });
-    
-    // Testar cliques
-    document.querySelectorAll('.cert-link').forEach(link => {
-        link.addEventListener('click', function(e) {
-            console.log(`🎯 Link clicado:`, {
-                id: this.id,
-                href: this.href,
-                working: this.href !== '#' && this.href !== ''
-            });
+    Object.entries(certificateFiles).forEach(([id, file]) => {
+        const link = document.getElementById(id);
+        if (link) {
+            // CORREÇÃO: Remova o atributo download e configure para abrir em nova aba
+            link.href = `assets/certificados/${file}`;
+            link.target = '_blank';
+            link.rel = 'noopener noreferrer';
             
-            if (this.href === '#' || this.href === '') {
-                console.warn('⚠️ Link ainda não configurado!');
-                e.preventDefault(); // Impede clique em link vazio
+            // Remove o atributo download se existir
+            if (link.hasAttribute('download')) {
+                link.removeAttribute('download');
             }
-        });
+            
+            // Adiciona título para acessibilidade
+            link.title = `Visualizar certificado: ${file.replace('.pdf', '').replace(/_/g, ' ')}`;
+            
+            // Evento de clique para logging
+            link.addEventListener('click', function() {
+                console.log(`Abrindo certificado: ${file}`);
+            });
+        } else {
+            console.warn(`Elemento com ID ${id} não encontrado`);
+        }
     });
+    
+    console.log("✅ Links dos certificados configurados!");
 }
 
-// ===== CHAMADA NO DOMContentLoaded =====
-document.addEventListener('DOMContentLoaded', function() {
-    console.log("🚀 DOM Carregado - Iniciando configurações...");
+// ===== SOLUÇÃO ALTERNATIVA PARA CERTIFICADOS =====
+function setupCertificateLinksAlternative() {
+    console.log("🔄 Usando solução alternativa para certificados...");
     
-    // Configurar ano
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    const certificateFiles = {
+        'cert1Link': 'montagem_manutencao.pdf',
+        'cert2Link': 'design_grafico.pdf',
+        'cert3Link': 'ciencias_sociais_ufc.pdf',
+        'cert4Link': 'fullstack_iel.pdf',
+        'cert5Link': 'devops_ada.pdf',
+        'cert6Link': 'ciencia_dados_uece.pdf',
+        'cert7Link': 'ads_unifor.pdf',
+        'cert8Link': 'engenharia_software.pdf',
+        'cert9Link': 'banco_dados.pdf'
+    };
     
-    // Inicializar tema
-    initializeTheme();
+    Object.entries(certificateFiles).forEach(([id, file]) => {
+        const link = document.getElementById(id);
+        if (link) {
+            // Substituir completamente o comportamento do link
+            link.onclick = function(e) {
+                e.preventDefault();
+                
+                // Determinar o caminho base
+                let basePath = 'assets/certificados/';
+                const currentPath = window.location.pathname;
+                
+                if (currentPath.includes('/index.html') || currentPath.endsWith('/')) {
+                    basePath = './assets/certificados/';
+                }
+                
+                const fileUrl = basePath + file;
+                console.log(`📤 Abrindo: ${fileUrl}`);
+                
+                // Abrir em nova janela
+                window.open(fileUrl, '_blank', 'noopener,noreferrer');
+                
+                return false;
+            };
+            
+            // Remover href original para prevenir comportamento padrão
+            link.removeAttribute('href');
+            link.style.cursor = 'pointer';
+            
+            console.log(`✅ ${id} configurado: ${file}`);
+        }
+    });
     
-    // Inicializar idioma
-    initializeLanguage();
-    
-    // Outras configurações...
-    setupMobileMenu();
-    setupSmoothScrolling();
-    setupThemeToggle();
-    setupLanguageSelector();
-    setupAnimations();
-    
-    // ⭐ IMPORTANTE: Chamar setupCertificateLinks
-    console.log("📞 Chamando setupCertificateLinks()...");
-    setupCertificateLinks();
-    
-    // Chamar teste (opcional)
-    setTimeout(() => {
-        testCertificateLinks();
-    }, 1000);
-});
-
-// ===== PARA TESTAR VIA CONSOLE =====
-// Adicione esta linha para testar manualmente pelo console
-window.debugCertificates = function() {
-    console.clear();
-    setupCertificateLinks();
-    testCertificateLinks();
-};
+    console.log("✅ Solução alternativa aplicada!");
+}
 
 // ===== FUNÇÃO PRINCIPAL SETLANGUAGE =====
 function setLanguage(lang) {
     console.log(`Alterando idioma para: ${lang}`);
-
+    
     document.body.setAttribute('data-lang', lang);
     localStorage.setItem('language', lang);
-
+    
     updateLanguageButton(lang);
     translatePage(lang);
-
+    
     // Atualiza os links do CV
     setupCvLink(lang);
 }
@@ -516,7 +469,7 @@ const translations = {
         'cert.7.title': 'Systems Analysis and Development',
         'cert.8.title': 'Software Engineering',
         'cert.9.title': 'Database Administration',
-
+        
         // Languages
         'lang.portuguese': 'Portuguese',
         'lang.english': 'English',

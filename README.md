@@ -39,21 +39,29 @@ cd landing_page
 
 # 3. Estrutura de arquivos criada:
 landing_page/
-├── index.html          # Página principal
-├── style.css           # Estilos CSS
-├── script.js           # Lógica JavaScript
-├── assets/
-│   ├── foto-perfil.jpeg # (Opcional)
-│   ├── flags/
-│   │   ├── br.svg      # Bandeira do Brasil
-│   │   └── us.svg      # Bandeira EUA
-│   └── certificados/   # Certificados em PDF/Imagem (Opcional)
-│   │   ├── cv_br_nome_sobrenome.pdf # Currículo em português br
-│   │   └── cv_en_nome_sobrenome.pdf # Currículo em português en
-└── README.md           # Este arquivo
-
-# 4. Abra index.html no navegador
+├── index.html                    # Página principal (SEU HTML ATUALIZADO)
+├── style.css                     # Estilos CSS completos (SEU CSS)
+├── script.js                     # JavaScript completo (VERSÃO FINAL)
+└── assets/
+    ├── foto-perfil.jpeg          # Sua foto de perfil
+    ├── favicon.ico               # Ícone do site
+    ├── flags/
+    │   ├── br.svg                # Bandeira do Brasil
+    │   └── us.svg                # Bandeira EUA
+    └── certificados/             # TODOS os certificados em PDF
+        ├── montagem_manutencao.pdf          # Cert 1
+        ├── design_grafico.pdf               # Cert 2
+        ├── ciencias_sociais_ufc.pdf         # Cert 3
+        ├── fullstack_iel.pdf                # Cert 4
+        ├── devops_ada.pdf                   # Cert 5
+        ├── ciencia_dados_uece.pdf           # Cert 6
+        ├── ads_unifor.pdf                   # Cert 7
+        ├── engenharia_software.pdf          # Cert 8
+        ├── banco_dados.pdf                  # Cert 9
+        ├── cv_br_lucas_cavalcante.pdf       # CV em português
+        └── cv_en_lucas_cavalcante.pdf       # CV em inglês
 ```
+# 4. Abra index.html no navegador
 
 ### Hospedagem Gratuita
 
