@@ -3,14 +3,17 @@
     /* Cores modo claro - ATUALIZADO */
     --primary-light: #2563eb;
     --primary-dark-light: #1d4ed8;
-    --secondary-light: #0f172a;        /* Texto principal escuro */
+    --secondary-light: #0f172a;
+    /* Texto principal escuro */
     --light-light: #f8fafc;
-    --gray-light: #475569;             /* Texto secundário mais escuro (era #64748b) */
+    --gray-light: #475569;
+    /* Texto secundário mais escuro (era #64748b) */
     --gray-light-light: #475569;
     --card-bg-light: #ffffff;
     --border-light: #e2e8f0;
-    --text-dark: #475569;              /* Cor preta para textos específicos */
-    
+    --text-dark: #475569;
+    /* Cor preta para textos específicos */
+
     /* Cores modo escuro (mantidas) */
     --primary-dark: #3b82f6;
     --primary-dark-dark: #60a5fa;
@@ -20,8 +23,9 @@
     --gray-light-dark: #334155;
     --card-bg-dark: #1e293b;
     --border-dark: #334155;
-    --text-light: #ffffff;             /* Cor branca para textos específicos no modo escuro */
-    
+    --text-light: #ffffff;
+    /* Cor branca para textos específicos no modo escuro */
+
     /* Cores comuns */
     --success: #10b981;
     --warning: #f59e0b;
@@ -199,7 +203,7 @@ header {
     background-color: var(--card-bg);
     border: 1px solid var(--border);
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     min-width: 140px;
     display: none;
     z-index: 1000;
@@ -267,9 +271,9 @@ header {
 /* ===== HERO SECTION ===== */
 .hero {
     padding: 80px 0;
-    background: linear-gradient(135deg, 
-        color-mix(in srgb, var(--primary) 5%, transparent 95%) 0%, 
-        color-mix(in srgb, var(--primary) 10%, transparent 90%) 100%);
+    background: linear-gradient(135deg,
+            color-mix(in srgb, var(--primary) 5%, transparent 95%) 0%,
+            color-mix(in srgb, var(--primary) 10%, transparent 90%) 100%);
 }
 
 .hero-content {
@@ -471,7 +475,8 @@ section {
 /* TEXTO PRETO NO MODO CLARO, BRANCO NO MODO ESCURO */
 .timeline-content li {
     margin-bottom: 8px;
-    color: var(--text-color) !important; /* Força cor preta/branca */
+    color: var(--text-color) !important;
+    /* Força cor preta/branca */
     font-weight: 400;
 }
 
@@ -645,6 +650,65 @@ footer {
     text-align: center;
 }
 
+/* Ajuste específico para modo escuro */
+body.dark-mode footer {
+    background-color: var(--light-dark); /* Usar a cor de fundo escura */
+    color: var(--secondary-dark); /* Texto branco */
+}
+
+body.dark-mode footer .contact-info {
+    color: var(--gray-dark); /* Texto mais claro para contatos */
+}
+
+body.dark-mode footer .contact-item i {
+    color: var(--primary-dark); /* Ícones azuis no modo escuro */
+}
+
+/* SOCIAL LINKS NO FOOTER - CORREÇÃO */
+footer .social-links a {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white !important; /* Força cor branca */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borda sutil para melhor visibilidade */
+}
+
+/* Modo escuro: ajusta a cor de fundo dos social links */
+body.dark-mode footer .social-links a {
+    background-color: rgba(255, 255, 255, 0.15); /* Um pouco mais visível no escuro */
+}
+
+footer .social-links a:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+/* Ajuste para copyright no modo escuro */
+body.dark-mode .copyright {
+    color: var(--gray-dark);
+}
+
+/* Opcional: adicionar transição suave para os ícones */
+footer .social-links i {
+    transition: color 0.3s ease;
+}
+
+/* Garantir que os ícones sejam visíveis em ambos os modos */
+footer .social-links a:hover i {
+    color: white !important;
+}
+
+/* Se ainda houver problema, adicione esta regra para forçar visibilidade */
+footer .social-links a:not(:hover) {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white !important;
+}
+
+footer {
+    background-color: var(--secondary);
+    color: var(--light);
+    padding: 50px 0;
+    text-align: center;
+}
+
 .footer-content {
     display: flex;
     flex-direction: column;
@@ -761,7 +825,7 @@ footer .social-links a:hover {
     .certifications-container {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
-    
+
     .language-dropdown {
         position: fixed;
         top: auto;
@@ -801,16 +865,16 @@ footer .social-links a:hover {
     .language-item {
         flex: 0 0 120px;
     }
-    
+
     .nav-controls {
         gap: 10px;
     }
-    
+
     .language-btn {
         padding: 6px 10px;
         font-size: 0.8rem;
     }
-    
+
     .flag-icon {
         width: 18px;
         height: 13px;
@@ -823,6 +887,7 @@ footer .social-links a:hover {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -833,6 +898,7 @@ footer .social-links a:hover {
     from {
         transform: translateY(100%);
     }
+
     to {
         transform: translateY(0);
     }

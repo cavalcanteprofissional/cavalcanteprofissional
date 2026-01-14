@@ -35,20 +35,21 @@ Landing page profissional desenvolvida para apresentar o currículo e portfólio
 git clone [seu-repositorio]
 
 # 2. Navegue até a pasta do projeto
-cd portfolio-lucas
+cd landing_page
 
 # 3. Estrutura de arquivos criada:
-portfolio-lucas/
+landing_page/
 ├── index.html          # Página principal
 ├── style.css           # Estilos CSS
 ├── script.js           # Lógica JavaScript
 ├── assets/
+│   ├── foto-perfil.jpeg # (Opcional)
 │   ├── flags/
 │   │   ├── br.svg      # Bandeira do Brasil
 │   │   └── us.svg      # Bandeira EUA
-│   ├── foto-perfil.jpg # (Opcional)
-│   └── certificados/   # Certificados em PDF/Imagem
-├── CV_Lucas_Cavalcante.pdf # Currículo
+│   └── certificados/   # Certificados em PDF/Imagem (Opcional)
+│   │   ├── cv_br_nome_sobrenome.pdf # Currículo em português br
+│   │   └── cv_en_nome_sobrenome.pdf # Currículo em português en
 └── README.md           # Este arquivo
 
 # 4. Abra index.html no navegador
@@ -92,7 +93,7 @@ vercel
 <!-- No index.html, linha ~180 -->
 <div class="hero-image">
     <!-- Substitua o ícone por: -->
-    <img src="assets/foto-perfil.jpg" alt="Lucas Cavalcante">
+    <img src="assets/foto-perfil.jpeg" alt="Nome Sobrenome">
 </div>
 ```
 
@@ -302,7 +303,7 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE para d
 
 ✨ **Desenvolvido com paixão por tecnologia e design** ✨
 
-**Última atualização:** Março 2024  
+**Última atualização:** Janeiro 2026  
 **Versão:** 1.0.0  
 **Por:** Lucas Cavalcante
 
