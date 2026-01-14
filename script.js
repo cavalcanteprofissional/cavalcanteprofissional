@@ -91,7 +91,7 @@ function initializeLanguage() {
 
     if (savedLang) {
         setLanguage(savedLang);
-    } else if (browserLang === 'en' || browserLang === 'pt') {
+    } else if (browserLang === 'en' || browserLang === 'pt' || browserLang === 'es') {
         setLanguage(browserLang);
     } else {
         setLanguage('pt');
@@ -141,6 +141,10 @@ function updateLanguageButton(lang) {
         flagSpan.className = 'flag-icon flag-us';
         flagSpan.title = 'English';
         codeSpan.textContent = 'EN';
+    } else if (lang === 'es') {
+        flagSpan.className = 'flag-icon flag-es';
+        flagSpan.title = 'Español';
+        codeSpan.textContent = 'ES';
     } else {
         flagSpan.className = 'flag-icon flag-br';
         flagSpan.title = 'Português';
@@ -157,6 +161,10 @@ function setupCvLink(lang) {
             link.href = "assets/certificados/cv_en_lucas_cavalcante.pdf";
             link.setAttribute("aria-label", "Download Resume");
             link.download = "Lucas_Cavalcante_Resume.pdf";
+        } else if (lang === "es") {
+            link.href = "assets/certificados/cv_es_lucas_cavalcante.pdf";
+            link.setAttribute("aria-label", "Descargar Currículum");
+            link.download = "Lucas_Cavalcante_Curriculum.pdf";
         } else {
             link.href = "assets/certificados/cv_br_lucas_cavalcante.pdf";
             link.setAttribute("aria-label", "Download Currículo");
@@ -265,6 +273,12 @@ function setupCertificateLinksAlternative() {
 
 // ===== FUNÇÃO PRINCIPAL SETLANGUAGE =====
 function setLanguage(lang) {
+    // Validar idioma
+    const validLanguages = ['pt', 'en', 'es'];
+    if (!validLanguages.includes(lang)) {
+        lang = 'pt'; // Fallback para português
+    }
+    
     console.log(`Alterando idioma para: ${lang}`);
     
     document.body.setAttribute('data-lang', lang);
@@ -483,6 +497,109 @@ const translations = {
         'footer.contact': 'Contact Me',
         'footer.message': 'I am always open to new opportunities and collaborations.',
         'footer.rights': 'All rights reserved.'
+    },
+
+    es: {
+        // Navegación
+        'nav.home': 'Inicio',
+        'nav.experience': 'Experiencia',
+        'nav.skills': 'Habilidades',
+        'nav.certifications': 'Certificaciones',
+        'nav.languages': 'Idiomas',
+
+        // Hero Section
+        'hero.name': 'Lucas Cavalcante dos Santos',
+        'hero.title': 'Analista de Datos | IA & Machine Learning | Visión Computacional',
+        'hero.description': 'Analista de Datos con experiencia en proyectos de IA, automatización y marketing digital. Especializado en el desarrollo de chatbots, dashboards interactivos, pipelines de datos de series temporales y geoespaciales, e implementación de estrategias SEO/SEM.',
+
+        // Contacto
+        'contact.location': 'Fortaleza - CE, Brasil',
+
+        // Botones
+        'button.cv': 'Currículum',
+        'button.view': 'Ver Certificado',
+
+        // Secciones
+        'sections.experience': 'Experiencia Profesional',
+        'sections.skills': 'Habilidades Técnicas',
+        'sections.certifications': 'Certificaciones',
+        'sections.languages': 'Idiomas',
+
+        // Experiencia
+        'experience.1.title': 'Analista de Datos',
+        'experience.1.1': 'Definición del alcance y modelado de datos (DER) para un proyecto en el mercado de moda de Ceará.',
+        'experience.1.2': 'Recopilación, limpieza y preparación de datasets utilizando Python y bibliotecas de análisis.',
+        'experience.1.3': 'Realización de Análisis Exploratorio de Datos (EDA) y cálculo de estadísticas descriptivas.',
+        'experience.1.4': 'Generación de dashboards interactivos e informes para la alta gerencia utilizando Power BI.',
+
+        'experience.2.title': 'Analista de Datos',
+        'experience.2.1': 'Definición del alcance y modelado de datos (DER) para un proyecto en el mercado de moda de Ceará.',
+        'experience.2.2': 'Recopilación, limpeza y preparación de datasets utilizando Python y bibliotecas de análisis.',
+        'experience.2.3': 'Realización de Análisis Exploratorio de Datos (EDA) y cálculo de estadísticas descriptivas.',
+        'experience.2.4': 'Implementación de modelo de machine learning (Random Forest) con evaluación de métricas.',
+        'experience.2.5': 'Generación de dashboards interactivos e informes para la alta gerencia utilizando Streamlit.',
+
+        'experience.3.title': 'Analista de Marketing y Comercial',
+        'experience.3.1': 'Planificación y gestión de campañas digitales (Google Ads, Meta Ads) con monitoreo de KPIs.',
+        'experience.3.2': 'Implementación de estrategias de SEO y SEM, resultando en aumento del tráfico orgánico.',
+        'experience.3.3': 'Creación y edición de contenido audiovisual para redes sociales y embudos de ventas.',
+        'experience.3.4': 'Gestión de CRM mediante ERP interno.',
+        'experience.3.5': 'Apoyo al equipo comercial en la prospección y retención de clientes.',
+
+        'experience.4.title': 'Analista de Marketing | Asistente de Marketing',
+        'experience.4.1': 'Desarrollo y monitoreo de campañas promocionales.',
+        'experience.4.2': 'Implementación de estrategias SEO/SEM y gestión de contenido para sitio web y redes sociales.',
+        'experience.4.3': 'Creación de contenido gráfico y mantenimiento de los canales de comunicación digitales.',
+
+        'experience.5.title': 'Técnico en Informática y Redes',
+        'experience.5.company': 'Autónomo',
+        'experience.5.1': 'Ensamblaje, mantenimiento y configuración de infraestructura de TI (computadoras, servidores, redes TCP/IP, Wi-Fi).',
+        'experience.5.2': 'Soporte técnico remoto y presencial, instalación de software y permisos de acceso.',
+        'experience.5.3': 'Consultoría técnica y elaboración de propuestas para licitaciones de equipos.',
+
+        // Habilidades
+        'skills.languages': 'Lenguajes & Bibliotecas',
+        'skills.ml': 'Machine Learning',
+        'skills.dl': 'Deep Learning & Visión Computacional',
+        'skills.platforms': 'Plataformas & Herramientas',
+        'skills.marketing': 'Marketing Digital',
+        'skills.tech': 'Técnico en TI',
+        'skills.agile': 'Gestión Ágil',
+        'skills.office': 'Microsoft Office',
+        'skills.soft': 'Habilidades Interpersonales',
+        'skills.communication': 'Comunicación',
+        'skills.teamwork': 'Trabajo en Equipo',
+        'skills.problem-solving': 'Resolución de Problemas',
+        'skills.adaptability': 'Adaptabilidad',
+        'skills.time-management': 'Gestión del Tiempo',
+        'skills.critical-thinking': 'Pensamiento Crítico',
+        'skills.creativity': 'Creatividad',
+
+        // Certificaciones
+        'certifications.subtitle': 'Haga clic en los enlaces para ver los certificados',
+        'cert.1.title': 'Ensamblaje y Mantenimiento de Computadoras',
+        'cert.2.title': 'Diseño Gráfico & Web Design',
+        'cert.3.title': 'Ciencias Sociales',
+        'cert.4.title': 'Desarrollador FullStack',
+        'cert.5.title': 'DevOps',
+        'cert.6.title': 'Ciencia de Datos',
+        'cert.7.title': 'Análisis y Desarrollo de Sistemas',
+        'cert.8.title': 'Ingeniería de Software',
+        'cert.9.title': 'Administración de Base de Datos',
+
+        // Idiomas
+        'lang.portuguese': 'Portugués',
+        'lang.english': 'Inglés',
+        'lang.spanish': 'Español',
+        'lang.japanese': 'Japonés',
+        'lang.level.native': 'Nativo',
+        'lang.level.advanced': 'Avanzado',
+        'lang.level.basic': 'Básico',
+
+        // Footer
+        'footer.contact': 'Contáctame',
+        'footer.message': 'Siempre estoy abierto a nuevas oportunidades y colaboraciones.',
+        'footer.rights': 'Todos los derechos reservados.'
     }
 };
 
@@ -499,6 +616,8 @@ function translatePage(lang) {
     // Atualizar título da página
     if (lang === 'en') {
         document.title = 'Lucas Cavalcante | Data Analyst & AI';
+    } else if (lang === 'es') {
+        document.title = 'Lucas Cavalcante | Analista de Datos & IA';
     } else {
         document.title = 'Lucas Cavalcante | Analista de Dados & IA';
     }
@@ -596,7 +715,7 @@ function setupAnimations() {
 // ===== CACHE =====
 window.addEventListener('beforeunload', function () {
     const currentTheme = document.body.classList.contains('dark-mode') ? 'dark-mode' : 'light-mode';
-    const currentLang = document.body.getAttribute('data-lang') || 'pt';
+    const currentLang = document.body.getAttribute('data-lang') || 'pt' || 'en' || 'es';
 
     localStorage.setItem('theme', currentTheme);
     localStorage.setItem('language', currentLang);
