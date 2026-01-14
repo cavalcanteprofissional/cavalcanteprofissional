@@ -1,18 +1,14 @@
 # 👋 Hello, I'm Lucas Cavalcante dos Santos
 
-🎯 **Data Analyst | AI & Machine Learning | Computer Vision**
+**Data Analyst | AI & Machine Learning | Computer Vision**
 
-📍 Fortaleza - CE  
-📧 cavalcanteprofissional@outlook.com  
-🌐 [Landing Page](https://cavalcanteprofissional.github.io/landing_page) | [LinkedIn](https://www.linkedin.com/in/seu-linkedin) | [GitHub](https://github.com/cavalcanteprofissional)
-
----
-
-## 🚀 About Me
 I am a **Data Analyst** with experience in **AI projects, automation, and digital marketing**.  
 I specialize in developing **chatbots, interactive dashboards, time series and geospatial data pipelines**, and implementing **SEO/SEM strategies**.  
 
 I combine strong technical skills in **Python, Machine Learning, and BI tools** with knowledge in **agile management and performance marketing**, delivering **actionable insights and scalable solutions**.
+
+
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/5585996859051)[![GitHub](https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/cavalcanteprofissional)[![Portfolio](https://img.shields.io/badge/Portfolio-1abc9c?style=for-the-badge&logo=google-chrome&logoColor=white)](https://cavalcanteprofissional.github.io/cavalcanteprofissional/)[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:cavalcanteprofissional@outlook.com)
 
 ---
 
@@ -26,14 +22,7 @@ I combine strong technical skills in **Python, Machine Learning, and BI tools** 
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
 ![AWS](https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)
-
----
-
-## 📊 GitHub Stats
-
-![Lucas's GitHub stats](https://github-readme-stats.vercel.app/api?username=cavalcanteprofissional&show_icons=true&theme=radical)  
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=cavalcanteprofissional&layout=compact&theme=radical)  
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=cavalcanteprofissional&theme=radical)
+![YOLO](https://img.shields.io/badge/YOLO-111F68?style=for-the-badge&logo=yolo&logoColor=white)
 
 ---
 
