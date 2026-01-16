@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://cavalcanteprofissional.github.io/landing_page/">
+  <a href="https://cavalcanteprofissional.github.io/cavalcanteprofissional/">
     <img src="https://img.shields.io/badge/Portfolio-1abc9c?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio" />
   </a>
   <a href="https://linkedin.com/in/cavalcante-lucas">
