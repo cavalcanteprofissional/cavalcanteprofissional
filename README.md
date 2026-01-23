@@ -26,7 +26,7 @@
 I'm a passionate **Data Analyst** with expertise in **AI/ML projects, automation, and digital marketing**.
 I specialize in transforming complex data into actionable insights through:
 
-🔹 **Interactive Dashboards** using Power BI, Streamlit, and Tableau  
+🔹 **Interactive Dashboards** using Power BI, Streamlit, Tableau, and Looker  
 🔹 **Advanced Analytics** with Machine Learning and Computer Vision  
 🔹 **Data Pipelines** for time series and geospatial analysis  
 🔹 **AI Solutions** including chatbots and automation systems  
@@ -45,7 +45,7 @@ I combine strong technical skills in **Python, Machine Learning, and BI tools** 
 ![OpenCV](https://img.shields.io/badge/OpenCV-27338e?style=for-the-badge&logo=opencv&logoColor=white)![YOLO](https://img.shields.io/badge/YOLO-111F68?style=for-the-badge&logo=yolo&logoColor=white)![ImageProcessing](https://img.shields.io/badge/Image_Processing-00A67E?style=for-the-badge&logo=imageprocessing&logoColor=white)
 
 ### 📊 Business Intelligence & Visualization
-![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=white)![Tableau](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white)![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)
+![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=white)![Tableau](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white)![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)![Looker](https://img.shields.io/badge/Looker-4285F4?style=for-the-badge&logo=looker&logoColor=white)
 
 ### 🗄️ Databases & Big Data
 ![SQL](https://img.shields.io/badge/SQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)![Geopandas](https://img.shields.io/badge/Geopandas-4CA048?style=for-the-badge&logo=geopandas&logoColor=white)
