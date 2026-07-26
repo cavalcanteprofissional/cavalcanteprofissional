@@ -22,10 +22,21 @@
 ```javascript
 const lucas = {
   local: "Fortaleza, Ceará 🇧🇷",
-  foco: "AI/ML & Data Analytics",
+  formacao: {
+    graduacao: ["ADS - UNIFOR", "Marketing Digital - UNIFOR"],
+    anterior: "Ciências Sociais - UFC"
+  },
+  experiencia: "6+ anos de atuação em TI, dados e marketing digital",
+  foco: {
+    atual: "Bolsista em Inovação Tecnológica na SiDi",
+    areas: ["IA & Machine Learning", "Visão Computacional", "Data Analytics"]
+  },
+  certificacoes: ["IA - UFC", "Ciência de Dados", "DevOps", "FullStack"],
   curiosidade: "Quando não estou analisando dados, estou explorando novos cafés! ☕"
 };
 ```
+
+> Analista de Dados com experiência em projetos de IA, automação e marketing digital. Especializado em dashboards interativos, pipelines de dados e soluções escaláveis. Combino habilidades técnicas em Python e ML com gestão ágil para entregar insights acionáveis.
 
 ---
 
