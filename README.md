@@ -1,17 +1,36 @@
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="ASSINATURA-LUCAS-CAVALCANTE-DOS-SANTOS-NEGATIVA.png">
-  <source media="(prefers-color-scheme: light)" srcset="ASSINATURA-LUCAS-CAVALCANTE-DOS-SANTOS.png">
-  <img alt="Assinatura Lucas Cavalcante" src="ASSINATURA-LUCAS-CAVALCANTE-DOS-SANTOS.png" width="400">
-</picture>
-
-[![Portfolio](https://img.shields.io/badge/Portfolio-1abc9c?style=for-the-badge&logo=google-chrome&logoColor=white)](https://github.com/cavalcanteprofissional/portfolio-cavalcante)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/cavalcante-lucas)
-[![GitHub](https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/cavalcanteprofissional)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:cavalcanteprofissional@outlook.com)
-[![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/5585996859051)
-[![Lattes](https://img.shields.io/badge/Lattes-0066B2?style=for-the-badge&logo=academia&logoColor=white)](http://lattes.cnpq.br/7686247677030579)
+<table>
+  <tr>
+    <td align="center" valign="middle" width="250">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="ASSINATURA-LUCAS-CAVALCANTE-DOS-SANTOS-NEGATIVA.png">
+        <source media="(prefers-color-scheme: light)" srcset="ASSINATURA-LUCAS-CAVALCANTE-DOS-SANTOS.png">
+        <img alt="Assinatura Lucas Cavalcante" src="ASSINATURA-LUCAS-CAVALCANTE-DOS-SANTOS.png" width="200">
+      </picture>
+    </td>
+    <td align="center" valign="middle">
+      <a href="https://github.com/cavalcanteprofissional/portfolio-cavalcante">
+        <img src="https://img.shields.io/badge/Portfolio-1abc9c?style=flat-square&logo=google-chrome&logoColor=white" alt="Portfolio" />
+      </a><br/>
+      <a href="https://linkedin.com/in/cavalcante-lucas">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" />
+      </a><br/>
+      <a href="https://github.com/cavalcanteprofissional">
+        <img src="https://img.shields.io/badge/GitHub-000000?style=flat-square&logo=github&logoColor=white" alt="GitHub" />
+      </a><br/>
+      <a href="mailto:cavalcanteprofissional@outlook.com">
+        <img src="https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white" alt="Email" />
+      </a><br/>
+      <a href="https://wa.me/5585996859051">
+        <img src="https://img.shields.io/badge/WhatsApp-25D366?style=flat-square&logo=whatsapp&logoColor=white" alt="WhatsApp" />
+      </a><br/>
+      <a href="http://lattes.cnpq.br/7686247677030579">
+        <img src="https://img.shields.io/badge/Lattes-0066B2?style=flat-square&logo=academia&logoColor=white" alt="Lattes" />
+      </a>
+    </td>
+  </tr>
+</table>
 
 </div>
 
