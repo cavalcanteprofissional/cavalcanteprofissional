@@ -139,11 +139,9 @@ graph TD
 
 ---
 
-## 📊 GitHub
+## 📈 Atividade de Contribuição
 
-[![GitHub Stats](https://github-readme-stats.vercel.app/api?username=cavalcanteprofissional&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true)](https://github.com/cavalcanteprofissional)
-
-[![Trophy](https://github-profile-trophy.vercel.app/?username=cavalcanteprofissional&theme=tokyonight&no-frame=false&no-bg=true&margin-w=4)](https://github.com/cavalcanteprofissional)
+[![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=cavalcanteprofissional&bg_color=1a1b27&color=38bdae&line=70a5fd&point=bf91f3&area=true&area_color=38bdae)](https://github.com/cavalcanteprofissional)
 
 ---
 
