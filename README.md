@@ -53,37 +53,55 @@ Minha trajetória une profundidade técnica e visão estratégica: conduzo proje
 
 ## 🛠️ Tecnologias & Ferramentas
 
-### 🐍 Data Science
+<div style="margin-left: 10px;">
+
+<details open>
+<summary style="margin: 3px;"><strong>Dados & Analytics</strong></summary>
+<br>
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
 ![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-336791?style=flat-square&logo=postgresql&logoColor=white)
 
-### 🤖 IA & Machine Learning
+</details>
+
+<details>
+<summary style="padding: 3px;"><strong>IA & Machine Learning</strong></summary>
+<br>
 
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
+![XGBoost](https://img.shields.io/badge/XGBoost-EB9E45?style=flat-square)
+![LightGBM](https://img.shields.io/badge/LightGBM-4CAF50?style=flat-square)
+![Transformers](https://img.shields.io/badge/Transformers-2E3440?style=flat-square&logo=huggingface&logoColor=FFD21E)
 
-### 👁️ Visão Computacional
+</details>
+
+<details>
+<summary style="padding: 3px;"><strong>Visão Computacional</strong></summary>
+<br>
 
 ![OpenCV](https://img.shields.io/badge/OpenCV-27338e?style=flat-square&logo=opencv&logoColor=white)
 ![YOLO](https://img.shields.io/badge/YOLO-111F68?style=flat-square&logo=yolo&logoColor=white)
 
-### 📊 BI & Visualização
+</details>
+
+<details>
+<summary style="padding: 3px;"><strong>BI & Visualização</strong></summary>
+<br>
 
 ![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=flat-square&logo=powerbi&logoColor=white)
 ![Tableau](https://img.shields.io/badge/Tableau-E97627?style=flat-square&logo=tableau&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)
 ![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=flat-square&logo=plotly&logoColor=white)
 
-### 🗄️ Bancos de Dados
+</details>
 
-![SQL](https://img.shields.io/badge/SQL-336791?style=flat-square&logo=postgresql&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
-
-### 🌐 Web Dev
+<details>
+<summary style="padding: 3px;"><strong>Desenvolvimento Web</strong></summary>
+<br>
 
 ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white)
@@ -92,11 +110,32 @@ Minha trajetória une profundidade técnica e visão estratégica: conduzo proje
 ![Flask](https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
 
-### ☁️ Cloud & DevOps
+</details>
 
+<details>
+<summary style="padding: 3px;"><strong>Bancos de Dados & Infra</strong></summary>
+<br>
+
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
 ![AWS](https://img.shields.io/badge/AWS-FF9900?style=flat-square&logo=amazonaws&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
+
+</details>
+
+<details open>
+<summary style="padding: 3px; color: green;"><strong>🌱 Em aprendizado</strong></summary>
+<br>
+
+![Microsoft Azure](https://img.shields.io/badge/Microsoft_Azure-0078D4?style=flat-square)
+![Google Cloud](https://img.shields.io/badge/Google_Cloud-4285F4?style=flat-square&logo=googlecloud&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
+
+</details>
+
+</div>
 
 ---
 
