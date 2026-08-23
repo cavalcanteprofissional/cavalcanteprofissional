@@ -214,7 +214,8 @@ Além de apresentação profissional, este repositório é também uma **infraes
 │   └── cv_br_lucas_cavalcante.pdf + .asc   # currículo com PAdES visível na pág. 2 + GPG
 ├── 🐍 scripts/
 │   ├── verificar_provenancia.py        # auditoria independente (Python padrão, zero dependências)
-│   └── assinar_pdf_visivel.py          # re-assinatura PAdES visível do currículo (renovação de 2031)
+│   ├── assinar_pdf_visivel.py          # re-assinatura PAdES visível do currículo (renovação de 2031)
+│   └── avisar_renovacao.py             # alerta por e-mail quando as credenciais estiverem a vencer
 ├── 🔐 seguranca/
 │   ├── CHECKSUMS.sha256                # manifesto SHA-256 com caminhos relativos à raiz
 │   ├── CHECKSUMS.sha256.asc            # manifesto assinado em GPG
