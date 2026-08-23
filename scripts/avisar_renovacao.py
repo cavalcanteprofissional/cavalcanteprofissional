@@ -20,7 +20,7 @@ O remetente usa SMTP do Gmail com Senha de App (requer 2FA ativo na conta).
 As credenciais ficam em arquivo LOCAL FORA DO GIT (nunca versionar!):
 
     %USERPROFILE%\\ferramentas\\smtp.json
-    { "usuario": "cavalcantelucas@edu.unifor.br",
+    { "usuario": "muitomalakoi@gmail.com",
       "senha_app": "<cole aqui a senha de app de 16 letras>" }
 
 Destinatário padrão: cavalcanteprofissional@outlook.com (alterável em
@@ -86,7 +86,7 @@ def ler_config(caminho: Path):
         raise FileNotFoundError(
             f"config ausente: {caminho}\n"
             f'Crie o arquivo com o conteúdo:\n'
-            '{ "usuario": "cavalcantelucas@edu.unifor.br", '
+            '{ "usuario": "muitomalakoi@gmail.com", '
             '"senha_app": "<senha de app>" }')
     cfg = json.loads(caminho.read_text(encoding="utf-8"))
     usuario, senha_app = cfg.get("usuario"), cfg.get("senha_app")
