@@ -29,6 +29,12 @@
 <a href="http://lattes.cnpq.br/7686247677030579">
   <img src="https://img.shields.io/badge/Lattes-0066B2?style=flat-square&logo=academia&logoColor=white" alt="Lattes" />
 </a>
+<a href="https://github.com/cavalcanteprofissional/cavalcanteprofissional/blob/main/seguranca/PROVENANCE.md">
+  <img src="https://img.shields.io/badge/Proven%C3%A2ncia-GPG_%7C_PAdES_%7C_Bitcoin-009688?style=flat-square&logo=bitcoin&logoColor=white" alt="Cadeia de provenância: GPG, PAdES e OpenTimestamps" />
+</a>
+<a href="https://github.com/cavalcanteprofissional/cavalcanteprofissional/actions/workflows/auditoria.yml">
+  <img src="https://github.com/cavalcanteprofissional/cavalcanteprofissional/actions/workflows/auditoria.yml/badge.svg" alt="Auditoria de provenância" />
+</a>
 
 </div>
 

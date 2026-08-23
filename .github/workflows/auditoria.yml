@@ -1,0 +1,30 @@
+name: Auditoria de Provenância
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: '23 9 * * 0' # domingos ~09:23 UTC
+  workflow_dispatch:
+
+jobs:
+  auditoria:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Importar chave pública GPG
+        run: gpg --import seguranca/pubkey.asc
+
+      - name: Auditoria completa (integridade + autoria + tempo ⛓ Bitcoin)
+        run: python scripts/verificar_provenancia.py
+
+      - name: Fallback de API para OpenTimestamps (blockstream.info)
+        if: failure()
+        run: |
+          echo "Tentando API alternativa..."
+          python scripts/verificar_provenancia.py --api https://blockstream.info/api
