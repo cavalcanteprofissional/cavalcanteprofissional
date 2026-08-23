@@ -229,7 +229,8 @@ Além de apresentação profissional, este repositório é também uma **infraes
 │   ├── pubkey.asc                      # chave pública GPG (ed25519)
 │   └── PROVENANCE.md                   # documentação completa da cadeia de prova
 └── 🖼️ assets/
-    └── foto-perfil.png                 # backup da imagem de perfil
+    ├── foto-perfil.png                 # backup da imagem de perfil
+    └── social-preview-card.png         # cartão de compartilhamento (og:image, 1200×630)
 ```
 
 | Camada | Tecnologia | Garantia |
