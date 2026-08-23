@@ -19,3 +19,6 @@ __pycache__/
 
 # Ambiente
 .env
+
+# Planejamento local (nao versionar)
+TODO.md
