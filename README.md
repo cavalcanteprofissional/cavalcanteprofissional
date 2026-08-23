@@ -1,36 +1,34 @@
 <div align="center">
 
-<table>
-  <tr>
-    <td align="center" valign="middle" width="250">
-      <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="ASSINATURA-LUCAS-CAVALCANTE-DOS-SANTOS-NEGATIVA.png">
-        <source media="(prefers-color-scheme: light)" srcset="ASSINATURA-LUCAS-CAVALCANTE-DOS-SANTOS.png">
-        <img alt="Assinatura Lucas Cavalcante" src="ASSINATURA-LUCAS-CAVALCANTE-DOS-SANTOS.png" width="200">
-      </picture>
-    </td>
-    <td align="center" valign="middle">
-      <a href="https://github.com/cavalcanteprofissional/portfolio-cavalcante">
-        <img src="https://img.shields.io/badge/Portfolio-1abc9c?style=flat-square&logo=google-chrome&logoColor=white" alt="Portfolio" />
-      </a><br/>
-      <a href="https://linkedin.com/in/cavalcante-lucas">
-        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" />
-      </a><br/>
-      <a href="https://github.com/cavalcanteprofissional">
-        <img src="https://img.shields.io/badge/GitHub-000000?style=flat-square&logo=github&logoColor=white" alt="GitHub" />
-      </a><br/>
-      <a href="mailto:cavalcanteprofissional@outlook.com">
-        <img src="https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white" alt="Email" />
-      </a><br/>
-      <a href="https://wa.me/5585996859051">
-        <img src="https://img.shields.io/badge/WhatsApp-25D366?style=flat-square&logo=whatsapp&logoColor=white" alt="WhatsApp" />
-      </a><br/>
-      <a href="http://lattes.cnpq.br/7686247677030579">
-        <img src="https://img.shields.io/badge/Lattes-0066B2?style=flat-square&logo=academia&logoColor=white" alt="Lattes" />
-      </a>
-    </td>
-  </tr>
-</table>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="ASSINATURA-LUCAS-CAVALCANTE-DOS-SANTOS-NEGATIVA.png">
+  <source media="(prefers-color-scheme: light)" srcset="ASSINATURA-LUCAS-CAVALCANTE-DOS-SANTOS.png">
+  <img alt="Assinatura Lucas Cavalcante" src="ASSINATURA-LUCAS-CAVALCANTE-DOS-SANTOS.png" width="200">
+</picture>
+
+<br/>
+
+<a href="https://cavalcanteprofissional.github.io/portfolio-cavalcante/">
+  <img src="https://img.shields.io/badge/Portfolio-1abc9c?style=flat-square&logo=google-chrome&logoColor=white" alt="Portfolio" />
+</a>
+<a href="https://github.com/cavalcanteprofissional/cavalcanteprofissional/blob/main/cv_br_lucas_cavalcante.pdf">
+  <img src="https://img.shields.io/badge/Curr%C3%ADculo-1A73E8?style=flat-square&logo=googledocs&logoColor=white" alt="Currículo" />
+</a>
+<a href="https://linkedin.com/in/cavalcante-lucas">
+  <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" />
+</a>
+<a href="https://github.com/cavalcanteprofissional">
+  <img src="https://img.shields.io/badge/GitHub-000000?style=flat-square&logo=github&logoColor=white" alt="GitHub" />
+</a>
+<a href="mailto:cavalcanteprofissional@outlook.com">
+  <img src="https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white" alt="Email" />
+</a>
+<a href="https://wa.me/5585996859051?text=Ol%C3%A1%2C%20Lucas!%20Vi%20seu%20perfil%20no%20GitHub%20e%20gostaria%20de%20conversar.">
+  <img src="https://img.shields.io/badge/WhatsApp-25D366?style=flat-square&logo=whatsapp&logoColor=white" alt="WhatsApp" />
+</a>
+<a href="http://lattes.cnpq.br/7686247677030579">
+  <img src="https://img.shields.io/badge/Lattes-0066B2?style=flat-square&logo=academia&logoColor=white" alt="Lattes" />
+</a>
 
 </div>
 
@@ -38,24 +36,18 @@
 
 ## 👨‍💻 Sobre Mim
 
-```javascript
-const lucas = {
-  local: "Fortaleza, Ceará 🇧🇷",
-  formacao: {
-    graduacao: ["ADS - UNIFOR", "Marketing Digital - UNIFOR"],
-    anterior: "Ciências Sociais - UFC"
-  },
-  experiencia: "6+ anos de atuação em TI, dados e marketing digital",
-  foco: {
-    atual: "Bolsista em Inovação Tecnológica na SiDi",
-    areas: ["IA & Machine Learning", "Visão Computacional", "Data Analytics"]
-  },
-  certificacoes: ["IA - UFC", "Ciência de Dados", "DevOps", "FullStack"],
-  curiosidade: "Quando não estou analisando dados, estou explorando novos cafés! ☕"
-};
-```
+Analista de Dados com mais de 6 anos de atuação em tecnologia, dados e marketing digital. Atualmente, atuo no núcleo de Inovação Tecnológica da SiDi, no desenvolvimento de soluções de Inteligência Artificial e Machine Learning aplicadas a problemas reais de negócio.
 
-> Analista de Dados com experiência em projetos de IA, automação e marketing digital. Especializado em dashboards interativos, pipelines de dados e soluções escaláveis. Combino habilidades técnicas em Python e ML com gestão ágil para entregar insights acionáveis.
+Minha trajetória une profundidade técnica e visão estratégica: conduzo projetos de ponta a ponta — da engenharia de dados à entrega — incluindo pipelines automatizados, modelos preditivos e dashboards executivos que subsidiam decisões de alta gestão.
+
+**Áreas de atuação:**
+
+- **Data Analytics & BI** — dashboards executivos, indicadores-chave e storytelling com dados (Power BI, Tableau, Streamlit)
+- **Inteligência Artificial** — modelagem preditiva, visão computacional e NLP (Python, TensorFlow, PyTorch)
+- **Engenharia de Dados** — pipelines de ETL automatizados e arquiteturas escaláveis (SQL, PostgreSQL, MongoDB)
+- **Gestão & Negócios** — metodologias ágeis, comunicação com stakeholders e alinhamento entre tecnologia e objetivos do negócio
+
+> Com rigor técnico e visão de negócio, transformo dados em decisões e tecnologia em resultados mensuráveis.
 
 ---
 
