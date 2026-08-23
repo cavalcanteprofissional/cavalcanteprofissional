@@ -269,18 +269,19 @@ def camada_integridade() -> None:
 
 def camada_autoria(skip_gpg: bool) -> None:
     print("\n[2/3] AUTORIA — assinaturas GPG destacadas")
+    if skip_gpg:
+        print("  ⚠ --skip-gpg: camada pulada (assinaturas GPG não verificadas)")
+        return
+    import shutil
+    gpg = shutil.which("gpg")
+    if gpg is None:
+        print("  ⚠ GnuPG não encontrado no PATH — camada pulada "
+              "(instale o GnuPG ou rode novamente com ele disponível)")
+        return
     pairs = sorted(p for p in REPO_ROOT.rglob("*.asc") if p.stem != "pubkey")
     if not pairs:
         fail("nenhum par de assinatura .asc encontrado")
         return
-    gpg = None if skip_gpg else None
-    if not skip_gpg:
-        import shutil
-        gpg = shutil.which("gpg")
-        if gpg is None:
-            print("  ⚠ GnuPG não encontrado no PATH — camada pulada "
-                  "(instale o GnuPG ou rode novamente com ele disponível)")
-            return
     for asc in pairs:
         target = asc.with_suffix("")
         rel_asc = asc.relative_to(REPO_ROOT)
