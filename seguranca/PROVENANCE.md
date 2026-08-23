@@ -106,6 +106,31 @@ ots verify CHECKSUMS.sha256.ots -f CHECKSUMS.sha256
 
 ---
 
+## 5) Auditoria automatizada (script independente)
+
+O repositório inclui um verificador que reproduz toda a cadeia de prova em um
+comando — sem instalar nada além do Python 3.8+ (**somente biblioteca padrão**):
+
+```bash
+python seguranca/verificar_provenancia.py             # auditoria completa
+python seguranca/verificar_provenancia.py --offline   # valida sem rede
+python seguranca/verificar_provenancia.py --skip-gpg  # máquina sem GnuPG
+```
+
+Camadas validadas: **integridade** (cada entrada do manifesto), **autoria**
+(todas as assinaturas GPG destacadas, se houver GnuPG disponível) e **tempo**
+(o script parseia o `.ots` nativamente, extrai a atestação Bitcoin, baixa o
+header do bloco citado de uma API pública — por padrão `mempool.space`,
+trocável via `--api` — e recomputa a merkle root para comparar).
+
+> **Nota sobre o próprio script:** trata-se de ferramenta de auditoria e não
+> entra no manifesto assinado. Sua integridade fica garantida pelos commits
+> assinados do Git (selo *Verified*) e pelo código aberto — qualquer pessoa
+> pode revisar suas ~400 linhas antes de executar.
+
+> Alternativa gráfica sem linha de comando: arraste `CHECKSUMS.sha256.ots` +
+> `CHECKSUMS.sha256` em https://opentimestamps.org
+
 ## Cadeia de custódia no Git
 
 Todo o histórico deste repositório está preservado no Git (commits assinados a partir de

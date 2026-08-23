@@ -216,6 +216,7 @@ Além de apresentação profissional, este repositório é também uma **infraes
 │   ├── CHECKSUMS.sha256                # manifesto SHA-256 com caminhos relativos à raiz
 │   ├── CHECKSUMS.sha256.asc            # manifesto assinado em GPG
 │   ├── CHECKSUMS.sha256.ots            # carimbo de tempo ancorado no blockchain Bitcoin
+│   ├── verificar_provenancia.py        # auditoria independente (Python padrão, zero dependências)
 │   ├── pubkey.asc                      # chave pública GPG (ed25519)
 │   └── PROVENANCE.md                   # documentação completa da cadeia de prova
 └── 🖼️ assets/
