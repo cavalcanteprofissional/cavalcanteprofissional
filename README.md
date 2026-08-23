@@ -161,6 +161,33 @@ graph TD
 
 ---
 
+## 🏗️ Arquitetura do Repositório
+
+Além de apresentação profissional, este repositório é também uma **infraestrutura de prova de autoria digital** — cada artefato possui registro criptográfico verificável:
+
+```text
+📦 cavalcanteprofissional
+├── 🖼️ ASSINATURA-...-NEGATIVA.png   # assinatura para tema escuro (metadados de autoria)
+├── 🖼️ ASSINATURA-...png             # assinatura para tema claro (metadados de autoria)
+├── 📄 cv_br_lucas_cavalcante.pdf    # currículo com assinatura PAdES embutida
+├── 🔐 CHECKSUMS.sha256 + .asc       # manifesto SHA-256 assinado em GPG
+├── ⛓️ CHECKSUMS.sha256.ots          # carimbo de tempo ancorado no blockchain Bitcoin
+├── 🗝️ pubkey.asc                    # chave pública GPG (ed25519)
+├── 📜 PROVENANCE.md                 # documentação completa da cadeia de prova
+└── ✅ TODO.md                       # pendências e renovações de segurança
+```
+
+| Camada | Tecnologia | Garantia |
+|--------|-----------|----------|
+| 🏷️ Identificação | Metadados PNG/PDF | Autoria, copyright e origem declarados |
+| ✍️ Integridade | PAdES/CMS (endesive) | PDF inalterado desde a assinatura |
+| 🔑 Autoria | GPG ed25519 | Vínculo criptográfico com minha identidade |
+| ⏱️ Tempo | OpenTimestamps | Existência comprovada em data certa, sem depender deste repo |
+
+> A validação passo a passo de cada camada está documentada no [PROVENANCE.md](PROVENANCE.md).
+
+---
+
 ## 📈 Atividade de Contribuição
 
 [![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=cavalcanteprofissional&bg_color=1a1b27&color=38bdae&line=70a5fd&point=bf91f3&area=true&area_color=38bdae)](https://github.com/cavalcanteprofissional)
@@ -171,6 +198,6 @@ graph TD
 
 *"Turning data into decisions, insights into impact, and curiosity into innovation."* 🚀
 
-![Footer](https://capsule-render.vercel.app/api?type=waving&color=0:1a1b27,50:38bdae,100:1a1b27&height=100&section=footer)
+![Footer](https://capsule-render.vercel.app/api?type=waving&color=0:0d1b2a,50:1b4965,100:0d1b2a&height=100&section=footer)
 
 </div>
