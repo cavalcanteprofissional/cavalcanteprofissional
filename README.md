@@ -1,9 +1,9 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="ASSINATURA-LUCAS-CAVALCANTE-DOS-SANTOS-NEGATIVA.png">
-  <source media="(prefers-color-scheme: light)" srcset="ASSINATURA-LUCAS-CAVALCANTE-DOS-SANTOS.png">
-  <img alt="Assinatura Lucas Cavalcante" src="ASSINATURA-LUCAS-CAVALCANTE-DOS-SANTOS.png" width="200">
+  <source media="(prefers-color-scheme: dark)" srcset="assinaturas/ASSINATURA-LUCAS-CAVALCANTE-DOS-SANTOS-NEGATIVA.png">
+  <source media="(prefers-color-scheme: light)" srcset="assinaturas/ASSINATURA-LUCAS-CAVALCANTE-DOS-SANTOS.png">
+  <img alt="Assinatura Lucas Cavalcante" src="assinaturas/ASSINATURA-LUCAS-CAVALCANTE-DOS-SANTOS.png" width="200">
 </picture>
 
 <br/>
@@ -11,7 +11,7 @@
 <a href="https://cavalcanteprofissional.github.io/portfolio-cavalcante/">
   <img src="https://img.shields.io/badge/Portfolio-1abc9c?style=flat-square&logo=google-chrome&logoColor=white" alt="Portfolio" />
 </a>
-<a href="https://github.com/cavalcanteprofissional/cavalcanteprofissional/blob/main/cv_br_lucas_cavalcante.pdf">
+<a href="https://github.com/cavalcanteprofissional/cavalcanteprofissional/blob/main/curriculo/cv_br_lucas_cavalcante.pdf">
   <img src="https://img.shields.io/badge/Curr%C3%ADculo-1A73E8?style=flat-square&logo=googledocs&logoColor=white" alt="Currículo" />
 </a>
 <a href="https://linkedin.com/in/cavalcante-lucas">
@@ -206,14 +206,20 @@ Além de apresentação profissional, este repositório é também uma **infraes
 
 ```text
 📦 cavalcanteprofissional
-├── 🖼️ ASSINATURA-...-NEGATIVA.png   # assinatura para tema escuro (metadados de autoria)
-├── 🖼️ ASSINATURA-...png             # assinatura para tema claro (metadados de autoria)
-├── 📄 cv_br_lucas_cavalcante.pdf    # currículo com assinatura PAdES embutida
-├── 🔐 CHECKSUMS.sha256 + .asc       # manifesto SHA-256 assinado em GPG
-├── ⛓️ CHECKSUMS.sha256.ots          # carimbo de tempo ancorado no blockchain Bitcoin
-├── 🗝️ pubkey.asc                    # chave pública GPG (ed25519)
-├── 📜 PROVENANCE.md                 # documentação completa da cadeia de prova
-└── ✅ TODO.md                       # pendências e renovações de segurança
+├── 🏠 README.md                        # este perfil (raiz obrigatória do GitHub)
+├── 🖼️ assinaturas/
+│   ├── ASSINATURA-....png + .asc       # obra autoral (tema claro) + assinatura GPG destacada
+│   └── ASSINATURA-...-NEGATIVA.png + .asc  # variante tema escuro + GPG
+├── 📄 curriculo/
+│   └── cv_br_lucas_cavalcante.pdf + .asc   # currículo com PAdES embutido + GPG
+├── 🔐 seguranca/
+│   ├── CHECKSUMS.sha256                # manifesto SHA-256 com caminhos relativos à raiz
+│   ├── CHECKSUMS.sha256.asc            # manifesto assinado em GPG
+│   ├── CHECKSUMS.sha256.ots            # carimbo de tempo ancorado no blockchain Bitcoin
+│   ├── pubkey.asc                      # chave pública GPG (ed25519)
+│   └── PROVENANCE.md                   # documentação completa da cadeia de prova
+└── 🖼️ assets/
+    └── foto-perfil.png                 # backup da imagem de perfil
 ```
 
 | Camada | Tecnologia | Garantia |
@@ -223,7 +229,7 @@ Além de apresentação profissional, este repositório é também uma **infraes
 | 🔑 Autoria | GPG ed25519 | Vínculo criptográfico com minha identidade |
 | ⏱️ Tempo | OpenTimestamps | Existência comprovada em data certa, sem depender deste repo |
 
-> A validação passo a passo de cada camada está documentada no [PROVENANCE.md](PROVENANCE.md).
+> A validação passo a passo de cada camada está documentada no [PROVENANCE.md](seguranca/PROVENANCE.md).
 
 ---
 

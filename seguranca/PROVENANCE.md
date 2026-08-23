@@ -23,19 +23,20 @@ e `cv_br_lucas_cavalcante.pdf`, produzidos por **Lucas Cavalcante dos Santos**.
 ## 1) Verificação por hash (integridade)
 
 Baixe os arquivos em versão **raw** (`raw.githubusercontent.com/cavalcanteprofissional/cavalcanteprofissional/main/...`)
-e compare com o manifesto:
+e compare com o manifesto — **executando da raiz do repositório**:
 
 ```bash
-sha256sum -c CHECKSUMS.sha256          # Linux/macOS/Git Bash
-certutil -hashfile ARQUIVO SHA256      # Windows (comparar manualmente)
+sha256sum -c seguranca/CHECKSUMS.sha256   # Linux/macOS/Git Bash
+certutil -hashfile ARQUIVO SHA256         # Windows (comparar manualmente)
 ```
 
-Hashes registrados em 2026-08-22:
+Hashes registrados em 2026-08-22 (bytes dos artefatos inalterados desde então;
+os caminhos refletem a organização em pastas de 2026-08-23):
 
 ```
-c2ca1c7ac3f9652fc6a6e2107072a669bec9eebfc98171c201f59f716008a0b4  ASSINATURA-LUCAS-CAVALCANTE-DOS-SANTOS.png
-1c146e1d435f9d361f2b26143af2f82036c2b0b0d913823f5b325fe7fa92402e  ASSINATURA-LUCAS-CAVALCANTE-DOS-SANTOS-NEGATIVA.png
-6b3b45eda92d86db7de09b6beea0e6fafeefd10e841b56f6912945ba880afaee  cv_br_lucas_cavalcante.pdf
+c2ca1c7ac3f9652fc6a6e2107072a669bec9eebfc98171c201f59f716008a0b4  assinaturas/ASSINATURA-LUCAS-CAVALCANTE-DOS-SANTOS.png
+1c146e1d435f9d361f2b26143af2f82036c2b0b0d913823f5b325fe7fa92402e  assinaturas/ASSINATURA-LUCAS-CAVALCANTE-DOS-SANTOS-NEGATIVA.png
+6b3b45eda92d86db7de09b6beea0e6fafeefd10e841b56f6912945ba880afaee  curriculo/cv_br_lucas_cavalcante.pdf
 ```
 
 ## 2) Assinatura GPG
@@ -52,10 +53,11 @@ Válida até: 2028-08-22 · Chave pública: pubkey.asc neste repositório
 > (LinkedIn, WhatsApp ou contato direto com o autor).
 
 ```bash
-gpg --import pubkey.asc
-gpg --verify CHECKSUMS.sha256.asc CHECKSUMS.sha256   # valida o manifesto inteiro
-gpg --verify cv_br_lucas_cavalcante.pdf.asc cv_br_lucas_cavalcante.pdf
-gpg --verify ASSINATURA-LUCAS-CAVALCANTE-DOS-SANTOS.png.asc ASSINATURA-LUCAS-CAVALCANTE-DOS-SANTOS.png
+gpg --import seguranca/pubkey.asc
+gpg --verify seguranca/CHECKSUMS.sha256.asc seguranca/CHECKSUMS.sha256   # valida o manifesto inteiro
+gpg --verify curriculo/cv_br_lucas_cavalcante.pdf.asc curriculo/cv_br_lucas_cavalcante.pdf
+gpg --verify assinaturas/ASSINATURA-LUCAS-CAVALCANTE-DOS-SANTOS.png.asc assinaturas/ASSINATURA-LUCAS-CAVALCANTE-DOS-SANTOS.png
+gpg --verify assinaturas/ASSINATURA-LUCAS-CAVALCANTE-DOS-SANTOS-NEGATIVA.png.asc assinaturas/ASSINATURA-LUCAS-CAVALCANTE-DOS-SANTOS-NEGATIVA.png
 ```
 
 ## 3) Assinatura PAdES embutida no PDF
@@ -86,10 +88,16 @@ na data do registro — verificação **independente deste repositório e do Git
 ots verify CHECKSUMS.sha256.ots -f CHECKSUMS.sha256
 ```
 
-> Status atual: **confirmado no Bitcoin** (2026-08-23) — prova completa embutida no `.ots`
-> via `ots upgrade`. Primeira âncora: bloco **963665**
-> (`0000000000000000000113d1aeefed9b151990e2aae325fef96e6534bfb22d59`, 2026-08-23 03:15:42 UTC),
-> com atestações redundantes confirmadas também nos blocos 963667, 963680 e 963688.
+> **Geração 1 (histórica):** manifesto na raiz do repositório, carimbado em 22/08/2026 e
+> confirmado no Bitcoin em 23/08/2026 — primeira âncora: bloco **963665**
+> (`0000000000000000000113d1aeefed9b151990e2aae325fef96e6534bfb22d59`, 03:15:42 UTC),
+> com atestações redundantes nos blocos 963667, 963680 e 963688. Essa prova permanece
+> verificável pelo histórico Git (commits 7c9fe13 → 2980f9d).
+>
+> **Geração 2 (atual):** manifesto reformatado com caminhos por pasta durante a
+> reorganização de 23/08/2026 — mesmos hashes de conteúdo, novo carimbo em
+> `seguranca/CHECKSUMS.sha256.ots`.
+> Status: *pendente de confirmação no Bitcoin* — atualizar esta linha após `ots upgrade`.
 > Verificação online alternativa: https://opentimestamps.org
 
 ---
@@ -99,3 +107,10 @@ ots verify CHECKSUMS.sha256.ots -f CHECKSUMS.sha256
 Todo o histórico deste repositório está preservado no Git (commits assinados a partir de
 22/08/2026). As versões anteriores dos arquivos continuam acessíveis pelos commits,
 constituindo registro cronológico adicional.
+
+**Reorganização de 23/08/2026:** os artefatos foram movidos para pastas temáticas
+(`assinaturas/`, `curriculo/`, `seguranca/`, `assets/`) via `git mv` — os **bytes dos
+arquivos assinados/carimbados não sofreram alteração** (hashes idênticos antes e depois),
+de modo que todas as assinaturas destacadas e a âncora Geração 1 permanecem válidas sobre
+o conteúdo. Apenas o manifesto foi reformatado (caminhos relativos), exigindo nova
+assinatura GPG e novo carimbo (Geração 2).
