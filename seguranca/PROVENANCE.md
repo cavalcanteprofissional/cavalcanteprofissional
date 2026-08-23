@@ -30,13 +30,13 @@ sha256sum -c seguranca/CHECKSUMS.sha256   # Linux/macOS/Git Bash
 certutil -hashfile ARQUIVO SHA256         # Windows (comparar manualmente)
 ```
 
-Hashes registrados em 2026-08-22 (bytes dos artefatos inalterados desde então;
-os caminhos refletem a organização em pastas de 2026-08-23):
+Assinaturas PNG registradas em 2026-08-22; currículo re-assinado em 23/08/2026
+com assinatura PAdES **visível** (o hash anterior permanece no histórico Git):
 
 ```
 c2ca1c7ac3f9652fc6a6e2107072a669bec9eebfc98171c201f59f716008a0b4  assinaturas/ASSINATURA-LUCAS-CAVALCANTE-DOS-SANTOS.png
 1c146e1d435f9d361f2b26143af2f82036c2b0b0d913823f5b325fe7fa92402e  assinaturas/ASSINATURA-LUCAS-CAVALCANTE-DOS-SANTOS-NEGATIVA.png
-6b3b45eda92d86db7de09b6beea0e6fafeefd10e841b56f6912945ba880afaee  curriculo/cv_br_lucas_cavalcante.pdf
+17f08936a3a9459b9d5d9994b9148a4cf2c329ab9ad833f95cc91a4c93bfb459  curriculo/cv_br_lucas_cavalcante.pdf
 ```
 
 ## 2) Assinatura GPG
@@ -94,14 +94,17 @@ ots verify CHECKSUMS.sha256.ots -f CHECKSUMS.sha256
 > com atestações redundantes nos blocos 963667, 963680 e 963688. Essa prova permanece
 > verificável pelo histórico Git (commits 7c9fe13 → 2980f9d).
 >
-> **Geração 2 (atual):** manifesto reformatado com caminhos por pasta durante a
-> reorganização de 23/08/2026 — mesmos hashes de conteúdo, novo carimbo em
-> `seguranca/CHECKSUMS.sha256.ots`.
-> Status: **confirmado no Bitcoin** (23/08/2026) — transação `5eeabeb1aecadb874bdfb9682749b0c3a5f2460abf937cce450ab3f54e8780fa`,
-> primeira âncora: bloco **963750**
-> (`00000000000000000000ea92f45c70b4100ceb15aa98de1f5129c6da951fc7a3`, 17:16:04 UTC).
-> Prova embutida via `ots upgrade` e verificada de forma independente contra a API
-> da blockchain (merkle root confere com o hash do manifesto).
+> **Geração 2 (histórica):** manifesto reformatado com caminhos por pasta durante a
+> reorganização de 23/08/2026 — mesmos hashes de conteúdo, carimbo confirmado no
+> Bitcoin: bloco **963750**
+> (`00000000000000000000ea92f45c70b4100ceb15aa98de1f5129c6da951fc7a3`, 17:16:04 UTC),
+> transação `5eeabeb1aecadb874bdfb9682749b0c3a5f2460abf937cce450ab3f54e8780fa`.
+> Preservada no histórico Git (commits aa29ee5 → 490577e).
+>
+> **Geração 3 (atual):** currículo re-assinado com assinatura PAdES **visível**
+> em 23/08/2026 — novo hash do PDF, manifesto atualizado e re-assinado, carimbo
+> em `seguranca/CHECKSUMS.sha256.ots` (submetido aos calendários às 19:34 UTC).
+> Status: *pendente de confirmação no Bitcoin* — atualizar esta linha após `ots upgrade`.
 > Verificação online alternativa: https://opentimestamps.org
 
 ---
@@ -143,3 +146,10 @@ arquivos assinados/carimbados não sofreram alteração** (hashes idênticos ant
 de modo que todas as assinaturas destacadas e a âncora Geração 1 permanecem válidas sobre
 o conteúdo. Apenas o manifesto foi reformatado (caminhos relativos), exigindo nova
 assinatura GPG e novo carimbo (Geração 2).
+
+**Re-assinatura do currículo (23/08/2026):** o PDF ganhou assinatura PAdES **visível** —
+a imagem da assinatura manuscrita foi estampada no canto inferior direito da página 2
+(caixa de 116×90 pt, margens de ~1,4 cm). O arquivo anterior (assinatura invisível,
+âncora Geração 2) permanece acessível pelo histórico Git; o certificado é o mesmo
+(fingerprint §3 inalterado), verificado localmente: hash íntegro, texto idêntico ao
+original e metadados preservados.
