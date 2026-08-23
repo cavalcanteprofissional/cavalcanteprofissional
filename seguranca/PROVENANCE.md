@@ -97,7 +97,11 @@ ots verify CHECKSUMS.sha256.ots -f CHECKSUMS.sha256
 > **Geração 2 (atual):** manifesto reformatado com caminhos por pasta durante a
 > reorganização de 23/08/2026 — mesmos hashes de conteúdo, novo carimbo em
 > `seguranca/CHECKSUMS.sha256.ots`.
-> Status: *pendente de confirmação no Bitcoin* — atualizar esta linha após `ots upgrade`.
+> Status: **confirmado no Bitcoin** (23/08/2026) — transação `5eeabeb1aecadb874bdfb9682749b0c3a5f2460abf937cce450ab3f54e8780fa`,
+> primeira âncora: bloco **963750**
+> (`00000000000000000000ea92f45c70b4100ceb15aa98de1f5129c6da951fc7a3`, 17:16:04 UTC).
+> Prova embutida via `ots upgrade` e verificada de forma independente contra a API
+> da blockchain (merkle root confere com o hash do manifesto).
 > Verificação online alternativa: https://opentimestamps.org
 
 ---
