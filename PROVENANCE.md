@@ -86,8 +86,10 @@ na data do registro — verificação **independente deste repositório e do Git
 ots verify CHECKSUMS.sha256.ots -f CHECKSUMS.sha256
 ```
 
-> Status atual: *pending* — confirmação automática em até ~24h (próximo bloco minerado).
-> Após confirmado, atualize a prova local com `ots upgrade CHECKSUMS.sha256.ots`.
+> Status atual: **confirmado no Bitcoin** (2026-08-23) — prova completa embutida no `.ots`
+> via `ots upgrade`. Primeira âncora: bloco **963665**
+> (`0000000000000000000113d1aeefed9b151990e2aae325fef96e6534bfb22d59`, 2026-08-23 03:15:42 UTC),
+> com atestações redundantes confirmadas também nos blocos 963667, 963680 e 963688.
 > Verificação online alternativa: https://opentimestamps.org
 
 ---
