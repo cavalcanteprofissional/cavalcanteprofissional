@@ -36,7 +36,7 @@ com assinatura PAdES **visível** (o hash anterior permanece no histórico Git):
 ```
 c2ca1c7ac3f9652fc6a6e2107072a669bec9eebfc98171c201f59f716008a0b4  assinaturas/ASSINATURA-LUCAS-CAVALCANTE-DOS-SANTOS.png
 1c146e1d435f9d361f2b26143af2f82036c2b0b0d913823f5b325fe7fa92402e  assinaturas/ASSINATURA-LUCAS-CAVALCANTE-DOS-SANTOS-NEGATIVA.png
-17f08936a3a9459b9d5d9994b9148a4cf2c329ab9ad833f95cc91a4c93bfb459  curriculo/cv_br_lucas_cavalcante.pdf
+c0711ae967aaa4562a3d1331f9191fca446ede94ef71ac9975ad7190aa6e084e  curriculo/cv_br_lucas_cavalcante.pdf
 ```
 
 ## 2) Assinatura GPG
@@ -101,9 +101,14 @@ ots verify CHECKSUMS.sha256.ots -f CHECKSUMS.sha256
 > transação `5eeabeb1aecadb874bdfb9682749b0c3a5f2460abf937cce450ab3f54e8780fa`.
 > Preservada no histórico Git (commits aa29ee5 → 490577e).
 >
-> **Geração 3 (atual):** currículo re-assinado com assinatura PAdES **visível**
-> em 23/08/2026 — novo hash do PDF, manifesto atualizado e re-assinado, carimbo
-> em `seguranca/CHECKSUMS.sha256.ots` (submetido aos calendários às 19:34 UTC).
+> **Geração 3 (substituída):** primeira versão do currículo com assinatura
+> visível, carimbada às 19:34 UTC de 23/08/2026 e substituída minutos depois,
+> antes da confirmação, por correção de layout (retângulo da assinatura com
+> coordenadas inválidas). Prova preservada no histórico Git (commit 41271a0).
+>
+> **Geração 4 (atual):** currículo com assinatura PAdES visível corrigida —
+> novo hash do PDF, manifesto atualizado e re-assinado, carimbo em
+> `seguranca/CHECKSUMS.sha256.ots` (submetido aos calendários às 19:40 UTC).
 > Status: *pendente de confirmação no Bitcoin* — atualizar esta linha após `ots upgrade`.
 > Verificação online alternativa: https://opentimestamps.org
 
@@ -149,7 +154,9 @@ assinatura GPG e novo carimbo (Geração 2).
 
 **Re-assinatura do currículo (23/08/2026):** o PDF ganhou assinatura PAdES **visível** —
 a imagem da assinatura manuscrita foi estampada no canto inferior direito da página 2
-(caixa de 116×90 pt, margens de ~1,4 cm). O arquivo anterior (assinatura invisível,
-âncora Geração 2) permanece acessível pelo histórico Git; o certificado é o mesmo
-(fingerprint §3 inalterado), verificado localmente: hash íntegro, texto idêntico ao
-original e metadados preservados.
+(caixa de 116×90 pt, margens de ~1,4 cm). Na primeira tentativa o retângulo da
+assinatura saiu com coordenadas inválidas e a imagem aparecia cortada; o artefato foi
+substituído no mesmo dia (Geração 3 → Geração 4), com remoção completa dos resíduos da
+assinatura antiga antes da nova aplicação. O arquivo anterior permanece acessível pelo
+histórico Git; o certificado é o mesmo (fingerprint §3 inalterado), verificado
+localmente: hash íntegro, texto idêntico ao original e metadados preservados.
