@@ -16,10 +16,10 @@ Verifica, em três camadas, todos os artefatos autorais deste repositório:
 
 Uso (a partir da raiz do repositório ou de qualquer pasta):
 
-    python seguranca/verificar_provenancia.py
-    python seguranca/verificar_provenancia.py --skip-gpg
-    python seguranca/verificar_provenancia.py --offline
-    python seguranca/verificar_provenancia.py --api https://mempool.space/api
+    python scripts/verificar_provenancia.py
+    python scripts/verificar_provenancia.py --skip-gpg
+    python scripts/verificar_provenancia.py --offline
+    python scripts/verificar_provenancia.py --api https://mempool.space/api
 
 Requisitos: Python 3.8+ (apenas biblioteca padrão). Opcionalmente, GnuPG no
 PATH para a camada [2/3]. Sem GnuPG, a camada é pulada com aviso.
@@ -41,8 +41,8 @@ for _stream in (sys.stdout, sys.stderr):
         _stream.reconfigure(encoding="utf-8", errors="replace")
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-MANIFEST = Path(__file__).resolve().parent / "CHECKSUMS.sha256"
-OTS_FILE = Path(__file__).resolve().parent / "CHECKSUMS.sha256.ots"
+MANIFEST = REPO_ROOT / "seguranca" / "CHECKSUMS.sha256"
+OTS_FILE = REPO_ROOT / "seguranca" / "CHECKSUMS.sha256.ots"
 
 MAGIC = b"\x00OpenTimestamps\x00\x00Proof\x00\xbf\x89\xe2\xe8\x84\xe8\x92\x94"
 

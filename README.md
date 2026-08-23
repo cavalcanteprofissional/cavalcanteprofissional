@@ -211,12 +211,13 @@ Além de apresentação profissional, este repositório é também uma **infraes
 │   ├── ASSINATURA-....png + .asc       # obra autoral (tema claro) + assinatura GPG destacada
 │   └── ASSINATURA-...-NEGATIVA.png + .asc  # variante tema escuro + GPG
 ├── 📄 curriculo/
-│   └── cv_br_lucas_cavalcante.pdf + .asc   # currículo com PAdES embutido + GPG
+│   └── cv_br_lucas_cavalcante.pdf + .asc   # currículo com PAdES visível na pág. 2 + GPG
+├── 🐍 scripts/
+│   └── verificar_provenancia.py        # auditoria independente (Python padrão, zero dependências)
 ├── 🔐 seguranca/
 │   ├── CHECKSUMS.sha256                # manifesto SHA-256 com caminhos relativos à raiz
 │   ├── CHECKSUMS.sha256.asc            # manifesto assinado em GPG
 │   ├── CHECKSUMS.sha256.ots            # carimbo de tempo ancorado no blockchain Bitcoin
-│   ├── verificar_provenancia.py        # auditoria independente (Python padrão, zero dependências)
 │   ├── pubkey.asc                      # chave pública GPG (ed25519)
 │   └── PROVENANCE.md                   # documentação completa da cadeia de prova
 └── 🖼️ assets/
@@ -230,7 +231,14 @@ Além de apresentação profissional, este repositório é também uma **infraes
 | 🔑 Autoria | GPG ed25519 | Vínculo criptográfico com minha identidade |
 | ⏱️ Tempo | OpenTimestamps | Existência comprovada em data certa, sem depender deste repo |
 
-> A validação passo a passo de cada camada está documentada no [PROVENANCE.md](seguranca/PROVENANCE.md).
+> 🔎 **Auditoria de ponta a ponta em um comando** — Python 3.8+, zero dependências:
+>
+> ```bash
+> python scripts/verificar_provenancia.py
+> ```
+>
+> Valida integridade (SHA-256), autoria (GPG) e tempo (OpenTimestamps ⛓ Bitcoin).
+> A metodologia de cada camada está documentada no [PROVENANCE.md](seguranca/PROVENANCE.md).
 
 ---
 
