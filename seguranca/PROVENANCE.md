@@ -108,8 +108,12 @@ ots verify CHECKSUMS.sha256.ots -f CHECKSUMS.sha256
 >
 > **Geração 4 (atual):** currículo com assinatura PAdES visível corrigida —
 > novo hash do PDF, manifesto atualizado e re-assinado, carimbo em
-> `seguranca/CHECKSUMS.sha256.ots` (submetido aos calendários às 19:40 UTC).
-> Status: *pendente de confirmação no Bitcoin* — atualizar esta linha após `ots upgrade`.
+> `seguranca/CHECKSUMS.sha256.ots`.
+> Status: **confirmado no Bitcoin** (23/08/2026) — transação `3fae9586574f1b94feec7874cc578fb3ba98f0263a06aafc024f70e3676a39ee`,
+> primeira âncora: bloco **963764**
+> (`0000000000000000000134ba3cee4f12a0566195ed358f927e7d2a62e1d3079e`, 20:32:26 UTC).
+> Prova embutida via `ots upgrade` e verificada de forma independente pelo script
+> `verificar_provenancia.py` contra a API da blockchain.
 > Verificação online alternativa: https://opentimestamps.org
 
 ---
