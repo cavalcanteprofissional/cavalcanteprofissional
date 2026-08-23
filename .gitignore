@@ -1,0 +1,21 @@
+# Chaves e certificados privados — NUNCA comitar
+*.p12
+*.pfx
+*.pem
+*.key
+*senha*
+
+# Assinaturas privadas/locais (as .asc PUBLICAS do repo sao permitidas)
+sig_private*
+
+# Backups e artefatos temporarios de assinatura
+backup_*.pdf
+signed_test.*
+*_test.pdf
+
+# Python
+__pycache__/
+*.pyc
+
+# Ambiente
+.env
