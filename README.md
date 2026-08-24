@@ -147,62 +147,79 @@ Minha trajetória une profundidade técnica e visão estratégica: conduzo proje
 
 ## 🗺️ Minha Trajetória
 
+Dois sistemas rodam **em paralelo**, cada um na sua faixa: 💼 *Experiência* (acima)
+e 🎓 *Formação* (abaixo). O tempo flui da **esquerda para a direita**; o período
+ativo de cada caixa está em negrito. As setas tracejadas duplas (`⇠⇢`) cruzam de
+uma faixa à outra para marcar as **conversas** — processos coexistentes que se
+influenciavam na mesma passagem do tempo.
+
 ```mermaid
-graph TD
-    L[Lucas Cavalcante<br/>Analista de Dados e IA & ML]
+graph LR
+    subgraph PROD ["💼 Experiência — sistemas em produção"]
+        direction LR
+        TI["🖥️ Técnico TI · Autônomo<br/><b>2013 – hoje</b><br/><i>processo persistente</i>"]
+        PORTAL["📣 Inst. Portal<br/>Marketing<br/><b>2022 – 24</b> ✅"]
+        ISEL["⚡ Iselétrica<br/>Marketing<br/><b>2024 – 25</b> ✅"]
+        ZENTS["📊 ZENTS<br/>Analista de Dados<br/><b>2025</b> ✅"]
+        REB["📊 Rebualf<br/>Analista de Dados<br/><b>2025 – 26</b> ✅"]
+        SIDI["🤖 SiDi · Núcleo de Inovação<br/>Bolsista · IA & ML<br/><b>2026 – hoje</b>"]
+    end
 
-    L --> A[📚 Formação Acadêmica]
-    L --> B[💼 Experiência Profissional]
-    L --> C[🛠️ Habilidades Técnicas]
+    subgraph BUILD ["🎓 Formação — sistemas em build"]
+        direction LR
+        JOGOS["🎮 Téc. em Jogos<br/>FIC Estácio<br/><b>2011 – 13</b> ✅"]
+        CSO["🌍 Ciências Sociais<br/>UFC<br/><b>2019 – 21</b> ⏸"]
+        ADS["💻 Tecnólogo ADS<br/>UNIFOR<br/><b>2022 – 26</b> ✅"]
+        MKT["📐 Tecnólogo Marketing<br/>UNIFOR<br/><b>2026 – hoje</b>"]
+    end
 
-    A --> A1[Tecnólogo em ADS<br/>UNIFOR - 2026]
-    A --> A2[Tecnólogo em Marketing<br/>UNIFOR - 2026]
-    A --> A3[Ciências Sociais<br/>UFC - 2019]
-    A --> A4[Técnico em Jogos<br/>FIC Estácio - 2014]
+    %% ── continuidade temporal (mesma faixa) ──
+    PORTAL -->|"transição de área"| ISEL
+    ISEL ==>|"virada p/ Dados"| ZENTS
+    ZENTS -->|"progressão"| REB
+    REB -->|"inovação"| SIDI
+    JOGOS -.->|"hiato"| CSO
+    CSO -.->|"foco profissional"| ADS
+    ADS -->|"nova graduação"| MKT
 
-    B --> B1[2026: Bolsista Inovação<br/>SiDi]
-    B --> B2[2025-26: Analista Dados<br/>Rebualf]
-    B --> B3[2025: Analista Dados<br/>ZENTS]
-    B --> B4[2024-25: Marketing<br/>Iselétrica]
-    B --> B5[2022-24: Marketing<br/>Inst. Portal]
-    B --> B6[2013+: Técnico TI<br/>Autônomo]
+    %% ── conversas entre faixas (coexistentes no tempo) ──
+    JOGOS ==>|"lógica → TI (2013)"| TI
+    TI <-.->|"base técnica constante"| PORTAL
+    TI <-.->|"infra ∥ inovação"| SIDI
+    PORTAL <-.->|"marketing movido a dados"| ADS
+    ISEL <-.->|"analytics no marketing"| ADS
+    ADS <-.->|"dados aplicados"| ZENTS
+    ADS <-.->|"analytics maduro"| REB
+    SIDI <-.->|"tecnologia ⇄ visão de negócio"| MKT
 
-    C --> C1[🐍 Data Science]
-    C --> C2[🤖 IA & ML]
-    C --> C3[👁️ Computer Vision]
-    C --> C4[📊 BI & Dashboards]
-    C --> C5[☁️ Cloud & DevOps]
+    %% ── geometria das faixas ──
+    TI ~~~ JOGOS
 
-    C1 --> C1a[Python/SQL]
-    C1 --> C1b[Pandas/NumPy]
-
-    C2 --> C2a[TensorFlow/PyTorch]
-    C2 --> C2b[NLP/Transformers]
-    C2 --> C2c[XGBoost/LightGBM]
-
-    C3 --> C3a[OpenCV]
-    C3 --> C3b[YOLO]
-
-    C4 --> C4a[Power BI]
-    C4 --> C4b[Streamlit]
-    C4 --> C4c[Tableau/Plotly]
-
-    C5 --> C5a[AWS/Azure/GCP]
-    C5 --> C5b[Docker/K8s]
-    C5 --> C5c[Git/GitHub]
-
-    classDef principal fill:#1a1b27,stroke:#38bdae,color:#fff,stroke-width:3px
-    classDef formacao fill:#1a1b27,stroke:#70a5fd,color:#fff
-    classDef experiencia fill:#1a1b27,stroke:#bf91f3,color:#fff
-    classDef habilidades fill:#1a1b27,stroke:#38bdae,color:#fff
-    classDef sub fill:#1a1b27,stroke:#50fa7b,color:#fff
-
-    class L principal
-    class A,A1,A2,A3,A4 formacao
-    class B,B1,B2,B3,B4,B5,B6 experiencia
-    class C,C1,C2,C3,C4,C5 habilidades
-    class C1a,C1b,C2a,C2b,C2c,C3a,C3b,C4a,C4b,C4c,C5a,C5b,C5c sub
+    classDef prod fill:#1a1b27,stroke:#38bdae,color:#fff,stroke-width:2px
+    classDef build fill:#1a1b27,stroke:#70a5fd,color:#fff,stroke-width:2px
+    classDef atual fill:#1a1b27,stroke:#bf91f3,color:#fff,stroke-width:3px
+    classDef pausa fill:#1a1b27,stroke:#ebcb8b,color:#fff,stroke-dasharray:4 3
+    class PORTAL,ISEL,ZENTS,REB prod
+    class JOGOS,ADS build
+    class TI,SIDI,MKT atual
+    class CSO pausa
 ```
+
+> **📖 Como ler**
+>
+> - **Faixas** — 💼 acima: experiência em produção · 🎓 abaixo: formação em build
+> - **Setas** — sólida `→`: transição natural na própria faixa · grossa `⇒`: marco
+>   decisivo (salto de nível ou entrega histórica entre faixas) · tracejada `⇢`:
+>   retomada após hiato · **tracejada dupla `⇠⇢`: conversa entre processos
+>   coexistentes**, ativos na mesma janela de tempo
+> - **Cores da borda** — 🟩 verde-água: experiência concluída · 🟦 azul: formação
+>   concluída · 🟪 roxo (borda mais grossa): **em execução hoje** · 🟨 amarelo
+>   tracejado: pausada
+> - **Selos nas caixas** — ✅ concluído · ⏸ trancado/pausado · sem selo = em execução hoje
+>
+> **🧵 Fio condutor:** base técnica (2011–13) → prática em marketing (2022–25)
+> construindo, em paralelo, a formação em dados → consolidação em Dados & IA
+> (2025–hoje), sempre com estudo e trabalho lado a lado.
 
 ---
 
