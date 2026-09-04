@@ -17,6 +17,12 @@
 <a href="https://linkedin.com/in/cavalcante-lucas">
   <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" />
 </a>
+<a href="https://www.facebook.com/cavalcanteprofissional">
+  <img src="https://img.shields.io/badge/Facebook-1877F2?style=flat-square&logo=facebook&logoColor=white" alt="Facebook" />
+</a>
+<a href="https://www.instagram.com/cavalcanteprofissional/">
+  <img src="https://img.shields.io/badge/Instagram-E4405F?style=flat-square&logo=instagram&logoColor=white" alt="Instagram" />
+</a>
 <a href="https://github.com/cavalcanteprofissional">
   <img src="https://img.shields.io/badge/GitHub-000000?style=flat-square&logo=github&logoColor=white" alt="GitHub" />
 </a>
@@ -350,6 +356,26 @@ cd $(mktemp -d) && git init -q && \
   git -c user.name="Seu Nome" -c user.email="<EMAIL>" commit --allow-empty -m t && \
   git log --format="%h %G?" -1               # deve exibir G
 ```
+
+> ⚠️ **Erro `Inappropriate ioctl for device` no WSL** — comportamento padrão (não
+> excepcional) quando o WSL usa **systemd**: o `gpg-agent` vira um serviço sem
+> terminal, e o `pinentry-curses` (padrão) falha ao pedir a passphrase. Em um
+> commit, o git tenta assinar mas aborta. Solução: instalar um **pinentry
+> gráfico** (usa a janela do WSLg, sem depender de TTY) e definir TTL de cache:
+>
+> ```bash
+> sudo apt-get install -y pinentry-gnome3
+> mkdir -p ~/.gnupg && chmod 700 ~/.gnupg
+> cat > ~/.gnupg/gpg-agent.conf <<'EOF'
+> pinentry-program /usr/bin/pinentry-gnome3
+> default-cache-ttl 28800        # ~8h — pede a passphrase ~1x/dia
+> max-cache-ttl 86400            # 24h no máximo
+> EOF
+> gpgconf --kill gpg-agent && gpgconf --launch gpg-agent
+> ```
+>
+> A janela do WSLg abrirá para a passphrase (1ª vez); em seguida o commit sai com
+> `G` e `Good signature`.
 
 ### 🍎 macOS
 
