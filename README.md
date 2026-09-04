@@ -268,6 +268,109 @@ Além de apresentação profissional, este repositório é também uma **infraes
 
 ---
 
+## 🔏 Assinatura de Commits Verificada (GPG)
+
+Todos os commits criados nesta máquina devem ser assinados em GPG e exibidos como
+**Verified** no GitHub. A configuração é **global** (`git config --global`) — vale
+para todos os repositórios, sem tocar em cada um individualmente. Abaixo, o plano
+por sistema operacional. Os comandos usam `<CHAVE>` como placeholder para o
+identificador da sua chave GPG e `<EMAIL>` para o e-mail vinculado à chave:
+**substitua pelos seus valores** (sem expor a passphrase em lugar algum).
+
+> ⚠️ Pré-requisito comum aos 4 sistemas: publicar a **chave pública** nas
+> [GitHub Settings → SSH and GPG keys](https://github.com/settings/keys) e usar o
+> mesmo `<EMAIL>` da chave no `user.email`. Caso o e-mail não esteja vinculado, o
+> GitHub mostra "Unverified" mesmo com assinatura válida.
+
+### 🪟 Windows (Git for Windows)
+
+```bash
+# 1. Identidade
+git config --global user.name "Seu Nome"
+git config --global user.email "<EMAIL>"
+
+# 2. Chave de assinatura + flag de assinatura global (opcional, somente se usar .exe do Git)
+#    (por padrão o gpg da instalação já é usado automaticamente)
+git config --global user.signingkey <CHAVE>
+git config --global commit.gpgsign true
+git config --global tag.gpgsign true
+```
+
+Validação:
+```bash
+git config --global --list | grep -E "(signingkey|gpgsign|user)"
+git log --format="%h %G? %s" -1          # %G? = G (Good)
+git verify-commit HEAD                    # Good signature from ...
+```
+
+### 🐧 Linux (nativo)
+
+```bash
+sudo apt install gnupg git                 # ou equivalente por distro
+git config --global user.name "Seu Nome"
+git config --global user.email "<EMAIL>"
+git config --global user.signingkey <CHAVE>
+git config --global commit.gpgsign true
+git config --global tag.gpgsign true
+```
+
+Se a chave foi importada de outro sistema, confirme com
+`gpg --list-secret-keys`. Validação idêntica ao Windows.
+
+### 💠 Windows + WSL (Linux dentro do Windows)
+
+O git do WSL passa caminhos temporários Linux (`/tmp/...`) ao `gpg` — por isso,
+configurar o `gpg.program` apontando para o `gpg.exe` do Windows **falha**. O
+caminho confiável é usar o **gpg nativo do WSL** com a chave importada:
+
+```bash
+# Dentro do WSL (usuário separado do host)
+wsl
+
+sudo apt install gnupg git
+
+# 1. Exportar a chave secreta NO HOST (Windows) e copiá-la para um caminho acessível
+#    pelo WSL (ex.: /mnt/c/Users/<usuario>/secreta.asc)
+# 2. Importar no WSL (o pinentry pede a passphrase, que só você fornece)
+gpg --import /mnt/c/Users/<usuario>/secreta.asc
+rm /mnt/c/Users/<usuario>/secreta.asc        # apague o arquivo — contém chave privada
+
+# 3. Configurar o git do WSL
+git config --global user.name "Seu Nome"
+git config --global user.email "<EMAIL>"
+git config --global user.signingkey <CHAVE>
+git config --global commit.gpgsign true
+git config --global tag.gpgsign true
+```
+
+Validação (no WSL):
+```bash
+gpg --list-secret-keys
+cd $(mktemp -d) && git init -q && \
+  git -c user.name="Seu Nome" -c user.email="<EMAIL>" commit --allow-empty -m t && \
+  git log --format="%h %G?" -1               # deve exibir G
+```
+
+### 🍎 macOS
+
+```bash
+brew install gnupg                            # se ainda não tiver
+git config --global user.name "Seu Nome"
+git config --global user.email "<EMAIL>"
+git config --global user.signingkey <CHAVE>
+git config --global commit.gpgsign true
+git config --global tag.gpgsign true
+```
+
+Validação idêntica aos demais:
+```bash
+git config --global --list | grep -E "(signingkey|gpgsign|user)"
+git log --format="%h %G? %s" -1
+git verify-commit HEAD
+```
+
+---
+
 ## 📈 Atividade de Contribuição
 
 [![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=cavalcanteprofissional&bg_color=1a1b27&color=38bdae&line=70a5fd&point=bf91f3&area=true&area_color=38bdae)](https://github.com/cavalcanteprofissional)
