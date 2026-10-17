@@ -1,0 +1,21 @@
+name: Atividade Recente no README
+
+on:
+  schedule:
+    - cron: '17 12 * * *' # diário ~12:17 UTC (09:17 em Fortaleza)
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    name: Atualizar README com atividade recente
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Gerar e commitar a atividade recente
+        uses: Readme-Workflows/recent-activity@v2.4.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

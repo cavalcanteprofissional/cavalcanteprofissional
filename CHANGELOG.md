@@ -5,6 +5,27 @@ Todas as mudanças notáveis deste repositório serão documentadas neste arquiv
 O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/)
 e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
 
+## [1.7.0] - 2026-10-17
+
+### Added
+- Workflow `recent-activity.yml` + `.github/recent-activity.config.yml`: a seção
+  `## 📡 Atividade Recente` do README passa a ser gerada automaticamente
+  (diariamente ~12:17 UTC e manualmente) a partir dos eventos públicos do perfil.
+- Seção `## 🔐 Verifique você mesmo` no README: checklist de verificação da
+  cadeia de prova sem depender do GitHub (importar chave GPG, conferir SHA-256,
+  validar assinatura e carimbo OpenTimestamps/Bitcoin).
+
+### Changed
+- Seção `## 📈 Atividade de Contribuição` removida: o gráfico do projeto
+  `github-readme-activity-graph` deixou de funcionar (Vercel retornando
+  `402 DEPLOYMENT_DISABLED`) e os deployments anteriores (Heroku, Cyclic)
+  também foram descontinuados.
+
+### Fixed
+- Emoji 🪟 (U+1FA9F, Unicode 14) quebrado para usuários do Windows 10 no título
+  `Windows (Git for Windows)` — substituído pelo sprite oficial do GitHub via
+  `<img>`, que renderiza como imagem em qualquer sistema operacional.
+
 ## [1.6.0] - 2026-09-04
 
 ### Added

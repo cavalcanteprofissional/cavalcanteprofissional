@@ -288,7 +288,7 @@ identificador da sua chave GPG e `<EMAIL>` para o e-mail vinculado à chave:
 > mesmo `<EMAIL>` da chave no `user.email`. Caso o e-mail não esteja vinculado, o
 > GitHub mostra "Unverified" mesmo com assinatura válida.
 
-### 🪟 Windows (Git for Windows)
+### <img src="https://github.githubassets.com/images/icons/emoji/unicode/1fa9f.png?v=8" alt="" width="24" height="24"> Windows (Git for Windows)
 
 ```bash
 # 1. Identidade
@@ -397,9 +397,35 @@ git verify-commit HEAD
 
 ---
 
-## 📈 Atividade de Contribuição
+## 🔐 Verifique você mesmo
 
-[![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=cavalcanteprofissional&bg_color=1a1b27&color=38bdae&line=70a5fd&point=bf91f3&area=true&area_color=38bdae)](https://github.com/cavalcanteprofissional)
+Os artefatos deste repositório podem ser conferidos **sem confiar no GitHub** — a
+cadeia de prova vai de metadados a uma âncora no blockchain do Bitcoin:
+
+```bash
+git clone https://github.com/cavalcanteprofissional/cavalcanteprofissional.git
+cd cavalcanteprofissional
+gpg --import seguranca/pubkey.asc
+sha256sum -c seguranca/CHECKSUMS.sha256
+gpg --verify seguranca/CHECKSUMS.sha256.asc seguranca/CHECKSUMS.sha256
+pip install opentimestamps-client && ots verify seguranca/CHECKSUMS.sha256.ots -f seguranca/CHECKSUMS.sha256
+```
+
+> Passo a passo completo, fingerprints e cadeia de custódia no Git:
+> [PROVENANCE.md](seguranca/PROVENANCE.md).
+
+---
+
+## 📡 Atividade Recente
+
+> Lista gerada automaticamente pela ação
+> [Recent Activity](https://github.com/Readme-Workflows/recent-activity) a partir
+> dos meus últimos eventos públicos no GitHub.
+
+<!--RECENT_ACTIVITY:start-->
+<!--RECENT_ACTIVITY:end-->
+
+<sub>🕐 <!--RECENT_ACTIVITY:last_update--></sub>
 
 ---
 
