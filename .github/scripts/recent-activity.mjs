@@ -114,6 +114,22 @@ function formatStamp() {
   return `Atualizado em ${fmt.format(new Date())} (BRT)`;
 }
 
+// Atualiza o timestamp preservando o marcador, para que execucoes futuras
+// continuem conseguindo localiza-lo.
+function applyStamp(text) {
+  const at = text.indexOf(STAMP);
+  if (at === -1) {
+    console.warn("Marcador last_update ausente no README; timestamp nao atualizado.");
+    return text;
+  }
+  const lineEnd = text.indexOf("\n", at);
+  const closing = text.indexOf("</sub>", at);
+  const cutTo =
+    closing !== -1 && (lineEnd === -1 || closing < lineEnd) ? closing : lineEnd;
+  const tail = cutTo === -1 ? "" : text.slice(cutTo);
+  return `${text.slice(0, at + STAMP.length)} ${formatStamp()}${tail}`;
+}
+
 async function main() {
   const events = await api(`/users/${USER}/events/public?per_page=100`);
   console.log(`${events.length} eventos publicos encontrados para ${USER}.`);
@@ -136,7 +152,7 @@ async function main() {
   const head = content.slice(0, start + START.length);
   const tail = content.slice(end);
   let updated = `${head}\n${renderSection(lines)}\n${tail}`;
-  updated = updated.replace(STAMP, formatStamp());
+  updated = applyStamp(updated);
 
   if (updated === content) {
     console.log("Conteudo identico. Nada a commitar.");
