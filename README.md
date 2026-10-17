@@ -418,9 +418,10 @@ pip install opentimestamps-client && ots verify seguranca/CHECKSUMS.sha256.ots -
 
 ## 📡 Atividade Recente
 
-> Lista gerada automaticamente pela ação
-> [Recent Activity](https://github.com/Readme-Workflows/recent-activity) a partir
-> dos meus últimos eventos públicos no GitHub.
+> Lista gerada automaticamente pelo workflow
+> [recent-activity.yml](.github/workflows/recent-activity.yml) a partir dos meus
+> últimos eventos públicos no GitHub. O commit é assinado pelo próprio GitHub
+> (web-flow), compatível com a regra `signed-commits` deste repositório.
 
 <!--RECENT_ACTIVITY:start-->
 <!--RECENT_ACTIVITY:end-->

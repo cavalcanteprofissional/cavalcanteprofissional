@@ -8,9 +8,11 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
 ## [1.7.0] - 2026-10-17
 
 ### Added
-- Workflow `recent-activity.yml` + `.github/recent-activity.config.yml`: a seção
-  `## 📡 Atividade Recente` do README passa a ser gerada automaticamente
+- Workflow `recent-activity.yml` + script `.github/scripts/recent-activity.mjs`:
+  a seção `## 📡 Atividade Recente` do README passa a ser gerada automaticamente
   (diariamente ~12:17 UTC e manualmente) a partir dos eventos públicos do perfil.
+  O README é atualizado pela API Contents, com commit assinado pelo GitHub
+  (web-flow), compatível com a regra `signed-commits` do repositório.
 - Seção `## 🔐 Verifique você mesmo` no README: checklist de verificação da
   cadeia de prova sem depender do GitHub (importar chave GPG, conferir SHA-256,
   validar assinatura e carimbo OpenTimestamps/Bitcoin).
@@ -25,6 +27,12 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
 - Emoji 🪟 (U+1FA9F, Unicode 14) quebrado para usuários do Windows 10 no título
   `Windows (Git for Windows)` — substituído pelo sprite oficial do GitHub via
   `<img>`, que renderiza como imagem em qualquer sistema operacional.
+- Atualização automática da atividade recente: a ação de terceiros
+  `Readme-Workflows/recent-activity` tinha três falhas — commit sem assinatura
+  rejeitado pela regra `signed-commits` (`required_signatures`), telemetria
+  apontando para serviço descontinuado (`readme-workflows.glitch.me`, HTTP 410)
+  e contagem de commits `undefined` (`payload.size` removido da API de eventos).
+  Substituída por workflow próprio que usa a API Contents.
 
 ## [1.6.0] - 2026-09-04
 

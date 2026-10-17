@@ -16,6 +16,6 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Gerar e commitar a atividade recente
-        uses: Readme-Workflows/recent-activity@v2.4.1
+        run: node .github/scripts/recent-activity.mjs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
