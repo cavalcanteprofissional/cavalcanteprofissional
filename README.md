@@ -431,7 +431,7 @@ pip install opentimestamps-client && ots verify seguranca/CHECKSUMS.sha256.ots -
 5. 🚀 Publiquei a release `v0.1.0` em [karaoke-map](https://github.com/cavalcanteprofissional/karaoke-map)
 <!--RECENT_ACTIVITY:end-->
 
-<sub>🕐 <!--RECENT_ACTIVITY:last_update--> Atualizado em 17/10/2026, 12:17 (BRT)</sub>
+<sub>🕐 <!--RECENT_ACTIVITY:last_update--> Atualizado em 17/10/2026, 12:21 (BRT)</sub>
 
 ---
 
