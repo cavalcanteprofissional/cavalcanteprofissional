@@ -424,14 +424,14 @@ pip install opentimestamps-client && ots verify seguranca/CHECKSUMS.sha256.ots -
 > (web-flow), compatível com a regra `signed-commits` deste repositório.
 
 <!--RECENT_ACTIVITY:start-->
-1. ⬆️ Enviei commits para [karaoke-map](https://github.com/cavalcanteprofissional/karaoke-map)<br>
+1. ⬆️ Enviei commits para [sopro](https://github.com/cavalcanteprofissional/sopro)<br>
 2. ⬆️ Enviei commits para [karaoke-flow](https://github.com/cavalcanteprofissional/karaoke-flow)<br>
-3. 🚀 Publiquei a release `v0.3.0` em [karaoke-map](https://github.com/cavalcanteprofissional/karaoke-map)<br>
-4. ⬆️ Enviei commits para [karaoke-map](https://github.com/cavalcanteprofissional/karaoke-map)<br>
-5. 🚀 Publiquei a release `v0.1.0` em [karaoke-map](https://github.com/cavalcanteprofissional/karaoke-map)
+3. ⬆️ Enviei commits para [karaoke-map](https://github.com/cavalcanteprofissional/karaoke-map)<br>
+4. ⬆️ Enviei commits para [karaoke-flow](https://github.com/cavalcanteprofissional/karaoke-flow)<br>
+5. 🚀 Publiquei a release `v0.3.0` em [karaoke-map](https://github.com/cavalcanteprofissional/karaoke-map)
 <!--RECENT_ACTIVITY:end-->
 
-<sub>🕐 <!--RECENT_ACTIVITY:last_update--> Atualizado em 17/10/2026, 12:21 (BRT)</sub>
+<sub>🕐 <!--RECENT_ACTIVITY:last_update--> Atualizado em 18/10/2026, 12:55 (BRT)</sub>
 
 ---
 
