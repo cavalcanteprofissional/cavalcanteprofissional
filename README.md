@@ -425,11 +425,10 @@ pip install opentimestamps-client && ots verify seguranca/CHECKSUMS.sha256.ots -
 
 <!--RECENT_ACTIVITY:start-->
 1. ⬆️ Enviei commits para [sopro](https://github.com/cavalcanteprofissional/sopro)<br>
-2. ⬆️ Enviei commits para [karaoke-flow](https://github.com/cavalcanteprofissional/karaoke-flow)<br>
-3. ⬆️ Enviei commits para [karaoke-map](https://github.com/cavalcanteprofissional/karaoke-map)
+2. ⬆️ Enviei commits para [karaoke-flow](https://github.com/cavalcanteprofissional/karaoke-flow)
 <!--RECENT_ACTIVITY:end-->
 
-<sub>🕐 <!--RECENT_ACTIVITY:last_update--> Atualizado em 14/11/2026, 15:11 (BRT)</sub>
+<sub>🕐 <!--RECENT_ACTIVITY:last_update--> Atualizado em 15/11/2026, 15:54 (BRT)</sub>
 
 ---
 
