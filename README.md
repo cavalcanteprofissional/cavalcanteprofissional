@@ -424,11 +424,12 @@ pip install opentimestamps-client && ots verify seguranca/CHECKSUMS.sha256.ots -
 > (web-flow), compatível com a regra `signed-commits` deste repositório.
 
 <!--RECENT_ACTIVITY:start-->
-1. ⬆️ Enviei commits para [sopro](https://github.com/cavalcanteprofissional/sopro)<br>
-2. ⬆️ Enviei commits para [karaoke-flow](https://github.com/cavalcanteprofissional/karaoke-flow)
+1. ⬆️ Enviei commits para [linktree-cavalcante](https://github.com/cavalcanteprofissional/linktree-cavalcante)<br>
+2. ⬆️ Enviei commits para [sopro](https://github.com/cavalcanteprofissional/sopro)<br>
+3. ⬆️ Enviei commits para [karaoke-flow](https://github.com/cavalcanteprofissional/karaoke-flow)
 <!--RECENT_ACTIVITY:end-->
 
-<sub>🕐 <!--RECENT_ACTIVITY:last_update--> Atualizado em 15/11/2026, 15:54 (BRT)</sub>
+<sub>🕐 <!--RECENT_ACTIVITY:last_update--> Atualizado em 16/11/2026, 19:11 (BRT)</sub>
 
 ---
 
