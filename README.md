@@ -429,7 +429,7 @@ pip install opentimestamps-client && ots verify seguranca/CHECKSUMS.sha256.ots -
 3. ⬆️ Enviei commits para [sopro](https://github.com/cavalcanteprofissional/sopro)
 <!--RECENT_ACTIVITY:end-->
 
-<sub>🕐 <!--RECENT_ACTIVITY:last_update--> Atualizado em 27/11/2026, 18:23 (BRT)</sub>
+<sub>🕐 <!--RECENT_ACTIVITY:last_update--> Atualizado em 28/11/2026, 17:11 (BRT)</sub>
 
 ---
 
